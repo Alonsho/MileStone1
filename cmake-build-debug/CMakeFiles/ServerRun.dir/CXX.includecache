@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alon/CLionProjects/AP/MileStone1/server.cpp
+sys/socket.h
+-
+string.h
+-
+iostream
+-
+unistd.h
+-
+netinet/in.h
+-
+

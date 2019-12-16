@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/alon/CLionProjects/AP/MileStone1/Command.h
+vector
+-
+
+/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.h
+string
+-
+Command.h
+/home/alon/CLionProjects/AP/MileStone1/Command.h
+vector
+-
+
+/home/alon/CLionProjects/AP/MileStone1/main.cpp
+iostream
+-
+list
+-
+vector
+-
+Command.h
+/home/alon/CLionProjects/AP/MileStone1/Command.h
+OpenServerCommand.h
+/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.h
+

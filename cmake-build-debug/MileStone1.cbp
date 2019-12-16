@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="MileStone1"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Main">
+				<Option output="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Main/fast">
+				<Option output="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MileStone1">
+				<Option output="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/MileStone1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 MileStone1"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MileStone1/fast">
+				<Option output="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/MileStone1" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 MileStone1/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ServerRun">
+				<Option output="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/ServerRun" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ServerRun"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ServerRun/fast">
+				<Option output="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/ServerRun" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 ServerRun/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Command.h">
+			<Option target="MileStone1"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.h">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/SymbolTable.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/SymbolTable.h">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Variable.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Variable.h">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/client.cpp">
+			<Option target="MileStone1"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/main.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/server.cpp">
+			<Option target="ServerRun"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
