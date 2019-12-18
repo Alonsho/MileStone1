@@ -78,12 +78,12 @@ preinstall:
 CMakeFiles/Main.dir/all:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/depend
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target Main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Main"
 .PHONY : CMakeFiles/Main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Main.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Main.dir/rule
@@ -105,7 +105,7 @@ CMakeFiles/Main.dir/clean:
 CMakeFiles/MileStone1.dir/all:
 	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/depend
 	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=6,7 "Built target MileStone1"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target MileStone1"
 .PHONY : CMakeFiles/MileStone1.dir/all
 
 # Build rule for subdir invocation for target.
@@ -132,7 +132,7 @@ CMakeFiles/MileStone1.dir/clean:
 CMakeFiles/ServerRun.dir/all:
 	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/depend
 	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=8,9 "Built target ServerRun"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target ServerRun"
 .PHONY : CMakeFiles/ServerRun.dir/all
 
 # Build rule for subdir invocation for target.

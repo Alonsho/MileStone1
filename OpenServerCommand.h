@@ -9,12 +9,14 @@
 #include <vector>
 
 class OpenServerCommand : public Command{
-  void getData(int);
+ private:
+  int client_socket;
 
 
  public:
   OpenServerCommand();
-  int execute(vector<string> param);
+  int execute(vector<string> param, int index);
+  void getData();
 };
 
 #endif //MILESTONE1__OPENSERVERCOMMAND_H_

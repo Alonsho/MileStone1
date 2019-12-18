@@ -6,13 +6,11 @@
 #define MILESTONE1__COMMAND_H_
 # include <vector>
 using namespace std;
-/**
- * Expression Interface
- */
+
 class Command {
 
  public:
-  virtual int execute(vector<string> param) = 0;
+  virtual int execute(vector<string> param, int index) = 0;
   virtual ~Command() {}
 };
 

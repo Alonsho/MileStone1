@@ -10,7 +10,7 @@
 using namespace std;
 class SymbolTable {
  private:
-  map<string, Variable>
+  map<string, Variable> fdsfdnsl;
 
 };
 

@@ -149,6 +149,33 @@ ServerRun/fast:
 	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/build
 .PHONY : ServerRun/fast
 
+ConnectCommand.o: ConnectCommand.cpp.o
+
+.PHONY : ConnectCommand.o
+
+# target to build an object file
+ConnectCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/ConnectCommand.cpp.o
+.PHONY : ConnectCommand.cpp.o
+
+ConnectCommand.i: ConnectCommand.cpp.i
+
+.PHONY : ConnectCommand.i
+
+# target to preprocess a source file
+ConnectCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/ConnectCommand.cpp.i
+.PHONY : ConnectCommand.cpp.i
+
+ConnectCommand.s: ConnectCommand.cpp.s
+
+.PHONY : ConnectCommand.s
+
+# target to generate assembly for a file
+ConnectCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/ConnectCommand.cpp.s
+.PHONY : ConnectCommand.cpp.s
+
 OpenServerCommand.o: OpenServerCommand.cpp.o
 
 .PHONY : OpenServerCommand.o
@@ -322,6 +349,9 @@ help:
 	@echo "... MileStone1"
 	@echo "... edit_cache"
 	@echo "... ServerRun"
+	@echo "... ConnectCommand.o"
+	@echo "... ConnectCommand.i"
+	@echo "... ConnectCommand.s"
 	@echo "... OpenServerCommand.o"
 	@echo "... OpenServerCommand.i"
 	@echo "... OpenServerCommand.s"

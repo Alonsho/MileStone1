@@ -179,6 +179,12 @@
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Command.h">
 			<Option target="MileStone1"/>
 		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/ConnectCommand.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/ConnectCommand.h">
+			<Option target="Main"/>
+		</Unit>
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.cpp">
 			<Option target="Main"/>
 		</Unit>

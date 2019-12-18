@@ -11,6 +11,7 @@
 #include "OpenServerCommand.h"
 
 
+
 using namespace std;
 
 OpenServerCommand::OpenServerCommand() {
@@ -18,10 +19,10 @@ OpenServerCommand::OpenServerCommand() {
 }
 
 
-int OpenServerCommand::execute(vector<string> param) {
-    string s = param[0];
+int OpenServerCommand::execute(vector<string> param, int index) {
 
-    int port = stoi(param[0]);
+
+    int port = stoi(param[index]);
     //create socket
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
     if (socketfd == -1) {
@@ -55,7 +56,7 @@ int OpenServerCommand::execute(vector<string> param) {
     }
 
     // accepting a client
-    int client_socket = accept(socketfd, (struct sockaddr*)&address, (socklen_t*)&addrlen);
+    client_socket = accept(socketfd, (struct sockaddr*)&address, (socklen_t*)&addrlen);
 
     if (client_socket == -1) {
         std::cerr<<"Error accepting client"<<std::endl;
@@ -65,15 +66,17 @@ int OpenServerCommand::execute(vector<string> param) {
     }
 
     close(socketfd); //closing the listening socket
-    thread th(&OpenServerCommand::getData, this,  client_socket);
-    //getData(client_socket); // SHOULD BE IN THREAD
+    char buffer[1024] = {0};
+    int valread = 1;
+    valread = read( client_socket , buffer, 1024);
+    std::cout<<buffer<<std::endl << flush;
 
 
 
     return 2;
 }
 
-void OpenServerCommand::getData(int client_socket) {
+void OpenServerCommand::getData() {
     char buffer[1024] = {0};
     int valread = 1;
     while (valread != 0) {
