@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="MileStone1" targetName="MileStone1" />
+      <config projectName="MileStone1" targetName="Main" />
+      <config projectName="MileStone1" targetName="ServerRun" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cb7fe1ea-dcea-4823-a9de-c2bd136b6b84" name="Default Changelist" comment="18/12 v1">
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/ConnectCommand.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConnectCommand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectCommand.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Main" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1V4JAAyNvH3MldTufDwSaE4exW7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="CLionExternalConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.Main">
+    <configuration name="Main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MileStone1" TARGET_NAME="Main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MileStone1" RUN_TARGET_NAME="Main">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MileStone1" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MileStone1" TARGET_NAME="MileStone1" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MileStone1" RUN_TARGET_NAME="MileStone1">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServerRun" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MileStone1" TARGET_NAME="ServerRun" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MileStone1" RUN_TARGET_NAME="ServerRun">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="CMakeRunConfiguration" factoryName="Application" nameIsGenerated="true" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MileStone1" RUN_TARGET_NAME="MileStone1" EXPLICIT_BUILD_TARGET_NAME="all">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.Main" />
+      <item itemvalue="CMake Application.MileStone1" />
+      <item itemvalue="CMake Application.ServerRun" />
+      <item itemvalue="CMake Application.Unnamed" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb7fe1ea-dcea-4823-a9de-c2bd136b6b84" name="Default Changelist" comment="" />
+      <created>1576506287465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576506287465</updated>
+      <workItem from="1576506288761" duration="21474000" />
+      <workItem from="1576535096006" duration="4892000" />
+      <workItem from="1576582948770" duration="10179000" />
+      <workItem from="1576611559209" duration="6329000" />
+      <workItem from="1576702954649" duration="2263000" />
+      <workItem from="1576748568032" duration="228000" />
+    </task>
+    <task id="LOCAL-00001" summary="as">
+      <created>1576528759925</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576528759925</updated>
+    </task>
+    <task id="LOCAL-00002" summary="18/12 v1">
+      <created>1576703131955</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576703131955</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="as" />
+    <MESSAGE value="18/12 v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="18/12 v1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="583" y="214" width="800" height="677" key="#Deployment" timestamp="1576703488633">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="583" y="214" width="800" height="677" key="#Deployment/67.27.1853.1053@67.27.1853.1053" timestamp="1576703488633" />
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576507203417">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="451" y="210" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576507203417" />
+    <state x="633" y="357" width="699" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576703474715">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="633" y="357" width="699" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1576703474715" />
+    <state x="558" y="151" width="860" height="803" key="CommitChangelistDialog2" timestamp="1576703602949">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="558" y="151" width="860" height="803" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1576703602949" />
+    <state x="776" y="310" width="447" height="484" key="FileChooserDialogImpl" timestamp="1576703280428">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="776" y="310" width="447" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1576703280428" />
+    <state x="842" y="447" width="292" height="210" key="Github.ShareDialog" timestamp="1576703264168">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="842" y="447" width="292" height="210" key="Github.ShareDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576703264168" />
+    <state width="1807" height="352" key="GridCell.Tab.0.bottom" timestamp="1576707867829">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.0.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576707867829" />
+    <state width="1807" height="352" key="GridCell.Tab.0.center" timestamp="1576707867829">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.0.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576707867829" />
+    <state width="1807" height="352" key="GridCell.Tab.0.left" timestamp="1576707867829">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.0.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576707867829" />
+    <state width="1807" height="352" key="GridCell.Tab.0.right" timestamp="1576707867829">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.0.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576707867829" />
+    <state width="1807" height="352" key="GridCell.Tab.1.bottom" timestamp="1576707867832">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.1.bottom/67.27.1853.1053@67.27.1853.1053" timestamp="1576707867832" />
+    <state width="1807" height="352" key="GridCell.Tab.1.center" timestamp="1576707867830">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.1.center/67.27.1853.1053@67.27.1853.1053" timestamp="1576707867830" />
+    <state width="1807" height="352" key="GridCell.Tab.1.left" timestamp="1576707867830">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.1.left/67.27.1853.1053@67.27.1853.1053" timestamp="1576707867830" />
+    <state width="1807" height="352" key="GridCell.Tab.1.right" timestamp="1576707867831">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state width="1807" height="352" key="GridCell.Tab.1.right/67.27.1853.1053@67.27.1853.1053" timestamp="1576707867831" />
+    <state x="482" y="187" key="SettingsEditor" timestamp="1576506865615">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="482" y="187" key="SettingsEditor/67.27.1853.1053@67.27.1853.1053" timestamp="1576506865615" />
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576703742819">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1576703742819" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1576748642669">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576748642669" />
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576703139280">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="761" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1576703139280" />
+    <state x="772" y="420" key="git4idea.rebase.GitRebaseDialog" timestamp="1576748794874">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="772" y="420" key="git4idea.rebase.GitRebaseDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1576748794874" />
+    <state x="657" y="253" key="run.anything.popup" timestamp="1576516934378">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="657" y="253" key="run.anything.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1576516934378" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/server.cpp</url>
+          <line>36</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/server.cpp</url>
+          <line>17</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/OpenServerCommand.cpp</url>
+          <line>70</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/OpenServerCommand.cpp</url>
+          <line>24</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

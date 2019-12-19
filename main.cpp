@@ -17,10 +17,10 @@ int main() {
 
     vector<string> commandLex;
     commandLex.push_back("OpenServerCommand");
-    commandLex.push_back("5400");
+    commandLex.push_back("5403");
     commandLex.push_back("connectControlClient");
     commandLex.push_back("\"127.0.0.1\"");
-    commandLex.push_back("5402");
+    commandLex.push_back("5401");
     thread serverThread(startServer, commandLex);
 
     thread clientThread(startClient, commandLex);

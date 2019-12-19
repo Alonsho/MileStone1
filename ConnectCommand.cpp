@@ -45,7 +45,7 @@ int ConnectCommand::execute(vector<string> param, int index) {
     }
 
     //if here we made a connection
-    char hello[] = "set /instrumentation/altimeter/indicated-altitude-ft 100";
+    char hello[] = "set /instrumentation/altimeter/indicated-altitude-ft 100\r\n";
     /*
     ‫/instrumentation/altimeter/indicated-altitude-ft‬‬
      */
