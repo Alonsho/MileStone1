@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     }
 }
 
-//this function is responsible about tokenizing the txt file.
+//this function is responsible of tokenizing the txt file.
 vector<string> lexFile(string str){
     string line;
     vector<string> strVector;
