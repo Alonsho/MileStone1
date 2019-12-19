@@ -5,6 +5,9 @@ CMakeFiles/Main.dir/ConnectCommand.cpp.o: ../Command.h
 CMakeFiles/Main.dir/ConnectCommand.cpp.o: ../ConnectCommand.cpp
 CMakeFiles/Main.dir/ConnectCommand.cpp.o: ../ConnectCommand.h
 
+CMakeFiles/Main.dir/Lexer.cpp.o: ../Lexer.cpp
+CMakeFiles/Main.dir/Lexer.cpp.o: ../Lexer.h
+
 CMakeFiles/Main.dir/OpenServerCommand.cpp.o: ../Command.h
 CMakeFiles/Main.dir/OpenServerCommand.cpp.o: ../OpenServerCommand.cpp
 CMakeFiles/Main.dir/OpenServerCommand.cpp.o: ../OpenServerCommand.h
@@ -18,6 +21,7 @@ CMakeFiles/Main.dir/Variable.cpp.o: ../Variable.h
 
 CMakeFiles/Main.dir/main.cpp.o: ../Command.h
 CMakeFiles/Main.dir/main.cpp.o: ../ConnectCommand.h
+CMakeFiles/Main.dir/main.cpp.o: ../Lexer.h
 CMakeFiles/Main.dir/main.cpp.o: ../OpenServerCommand.h
 CMakeFiles/Main.dir/main.cpp.o: ../main.cpp
 

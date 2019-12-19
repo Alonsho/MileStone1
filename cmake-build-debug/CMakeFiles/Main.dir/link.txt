@@ -1,1 +1,1 @@
-/usr/bin/c++  -pthread -g   CMakeFiles/Main.dir/main.cpp.o CMakeFiles/Main.dir/OpenServerCommand.cpp.o CMakeFiles/Main.dir/SymbolTable.cpp.o CMakeFiles/Main.dir/Variable.cpp.o CMakeFiles/Main.dir/ConnectCommand.cpp.o  -o Main 
+/usr/bin/c++  -pthread -g   CMakeFiles/Main.dir/main.cpp.o CMakeFiles/Main.dir/OpenServerCommand.cpp.o CMakeFiles/Main.dir/SymbolTable.cpp.o CMakeFiles/Main.dir/Variable.cpp.o CMakeFiles/Main.dir/ConnectCommand.cpp.o CMakeFiles/Main.dir/Lexer.cpp.o  -o Main 

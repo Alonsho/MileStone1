@@ -6,58 +6,60 @@
 #include "Command.h"
 #include "OpenServerCommand.h"
 #include "ConnectCommand.h"
+#include "Lexer.h"
 
 
-void startServer(vector<string> commandLex);
-void startClient(vector<string> commandLex);
+void startServer(vector<string> commandLex, int i, OpenServerCommand* server);
+void startClient(vector<string> commandLex, int i, ConnectCommand* client);
 
 using namespace std;
 int main() {
 
 
-    vector<string> commandLex;
-    commandLex.push_back("OpenServerCommand");
-    commandLex.push_back("5403");
-    commandLex.push_back("connectControlClient");
-    commandLex.push_back("\"127.0.0.1\"");
-    commandLex.push_back("5401");
-    thread serverThread(startServer, commandLex);
 
-    thread clientThread(startClient, commandLex);
+    vector<string> commandLex = lexFile("fly_with_func.txt");
 
-    /*
     OpenServerCommand server;
-    string commandName = "OpenServerCommand";
-    string s = "5400";
-    stv.push_back(s);
-    server.execute(stv);
-    if (commandName == "OpenServerCommand") {
-        thread th1(&OpenServerCommand::getData, server);
+    int i = 0;
+    for (i = 0; i < commandLex.size(); i++) {
+        if (commandLex[i] == "openDataServer") {
+            break;
+        }
     }
-     */
+
+
+    thread serverThread(startServer, commandLex, i, &server);
+    while (!server.isConnected()) {
+        cout << "waiting for connection FROM simulator" << endl;
+        sleep(1);
+    }
+
+    ConnectCommand client;
+    for (i = 0; i < commandLex.size(); i++) {
+        if (commandLex[i] == "connectControlClient") {
+            break;
+        }
+    }
+
+    thread clientThread(startClient, commandLex, i, &client);
+    while (!client.isConnected()) {
+        cout << "Trying to establish connection TO simulator" << endl;
+        sleep(1);
+    }
+    //wait for simulator to start (wait until connection is established) DO NOT USE IF USING DANIELAS PYTHON CODE
+    //sleep(45);
+
     serverThread.join();
     clientThread.join();
     return 0;
 }
 
-void startServer(vector<string> commandLex) {
-    OpenServerCommand server;
-    for (int i = 0; i < commandLex.size(); i++) {
-        if (commandLex[i] == "OpenServerCommand") {
-            server.execute(commandLex, i+1);
-            break;
-        }
-    }
+void startServer(vector<string> commandLex, int i, OpenServerCommand* server) {
+    server->execute(commandLex, i+1);
 }
 
-void startClient(vector<string> commandLex) {
-    for (int i = 0; i < commandLex.size(); i++) {
-        if (commandLex[i] == "connectControlClient") {
-            ConnectCommand client;
-            client.execute(commandLex, i+1);
-            break;
-        }
-    }
+void startClient(vector<string> commandLex, int i, ConnectCommand* client) {
+    client->execute(commandLex, i+1);
 }
 
 

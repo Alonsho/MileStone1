@@ -176,6 +176,33 @@ ConnectCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/ConnectCommand.cpp.s
 .PHONY : ConnectCommand.cpp.s
 
+Lexer.o: Lexer.cpp.o
+
+.PHONY : Lexer.o
+
+# target to build an object file
+Lexer.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Lexer.cpp.o
+.PHONY : Lexer.cpp.o
+
+Lexer.i: Lexer.cpp.i
+
+.PHONY : Lexer.i
+
+# target to preprocess a source file
+Lexer.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Lexer.cpp.i
+.PHONY : Lexer.cpp.i
+
+Lexer.s: Lexer.cpp.s
+
+.PHONY : Lexer.s
+
+# target to generate assembly for a file
+Lexer.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Lexer.cpp.s
+.PHONY : Lexer.cpp.s
+
 OpenServerCommand.o: OpenServerCommand.cpp.o
 
 .PHONY : OpenServerCommand.o
@@ -352,6 +379,9 @@ help:
 	@echo "... ConnectCommand.o"
 	@echo "... ConnectCommand.i"
 	@echo "... ConnectCommand.s"
+	@echo "... Lexer.o"
+	@echo "... Lexer.i"
+	@echo "... Lexer.s"
 	@echo "... OpenServerCommand.o"
 	@echo "... OpenServerCommand.i"
 	@echo "... OpenServerCommand.s"

@@ -9,13 +9,14 @@
 #include <vector>
 
 class ConnectCommand: public Command {
+  bool connected;
 
  public:
   ConnectCommand() {
-
+      connected = false;
   }
   int execute(vector<string> param, int index);
-
+  bool isConnected();
 };
 
 #endif //MILESTONE1__CONNECTCOMMAND_H_

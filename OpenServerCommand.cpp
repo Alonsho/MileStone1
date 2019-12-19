@@ -15,6 +15,7 @@
 using namespace std;
 
 OpenServerCommand::OpenServerCommand() {
+    connected = false;
 
 }
 
@@ -63,13 +64,16 @@ int OpenServerCommand::execute(vector<string> param, int index) {
         //  return -4;
     } else {
         cout<<"connected to simulator"<<std::endl;
+
     }
 
     close(socketfd); //closing the listening socket
     char buffer[1024] = {0};
     int valread = 1;
     valread = read( client_socket , buffer, 1024);
+    connected = true;
     std::cout<<buffer<<std::endl << flush;
+    getData();
 
 
 
@@ -83,4 +87,8 @@ void OpenServerCommand::getData() {
         valread = read( client_socket , buffer, 1024);
         std::cout<<buffer<<std::endl << flush;
     }
+}
+
+bool OpenServerCommand::isConnected() {
+    return connected;
 }

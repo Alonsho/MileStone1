@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Main.dir/ConnectCommand.cpp.o"
+  "CMakeFiles/Main.dir/Lexer.cpp.o"
   "CMakeFiles/Main.dir/OpenServerCommand.cpp.o"
   "CMakeFiles/Main.dir/SymbolTable.cpp.o"
   "CMakeFiles/Main.dir/Variable.cpp.o"

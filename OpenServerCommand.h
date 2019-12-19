@@ -11,12 +11,15 @@
 class OpenServerCommand : public Command{
  private:
   int client_socket;
+  bool connected;
 
 
  public:
   OpenServerCommand();
   int execute(vector<string> param, int index);
   void getData();
+  bool isConnected();
+
 };
 
 #endif //MILESTONE1__OPENSERVERCOMMAND_H_

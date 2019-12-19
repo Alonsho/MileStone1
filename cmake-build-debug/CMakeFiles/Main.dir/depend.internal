@@ -5,6 +5,9 @@ CMakeFiles/Main.dir/ConnectCommand.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/Command.h
  /home/alon/CLionProjects/AP/MileStone1/ConnectCommand.cpp
  /home/alon/CLionProjects/AP/MileStone1/ConnectCommand.h
+CMakeFiles/Main.dir/Lexer.cpp.o
+ /home/alon/CLionProjects/AP/MileStone1/Lexer.cpp
+ /home/alon/CLionProjects/AP/MileStone1/Lexer.h
 CMakeFiles/Main.dir/OpenServerCommand.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/Command.h
  /home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.cpp
@@ -19,5 +22,6 @@ CMakeFiles/Main.dir/Variable.cpp.o
 CMakeFiles/Main.dir/main.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/Command.h
  /home/alon/CLionProjects/AP/MileStone1/ConnectCommand.h
+ /home/alon/CLionProjects/AP/MileStone1/Lexer.h
  /home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.h
  /home/alon/CLionProjects/AP/MileStone1/main.cpp

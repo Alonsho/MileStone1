@@ -5,15 +5,7 @@
 #include "Lexer.h"
 using namespace std;
 
-int main(int argc, char *argv[]) {
-    try {
-        //trying to create a lexer.
-        vector<string> commandLex = lexFile(argv[1]);
-        printVector(commandLex);
-    } catch(const char* e) {
-        cout<<e<<endl;
-    }
-}
+
 
 //this function is responsible of tokenizing the txt file.
 vector<string> lexFile(string str){

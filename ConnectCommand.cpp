@@ -13,6 +13,8 @@
 
 
 
+
+
 int ConnectCommand::execute(vector<string> param, int index) {
     //create socket
     int client_socket = socket(AF_INET, SOCK_STREAM, 0);
@@ -42,10 +44,11 @@ int ConnectCommand::execute(vector<string> param, int index) {
         return -2;
     } else {
         std::cout<<"Client is now connected to server" <<std::endl;
+        connected = true;
     }
 
     //if here we made a connection
-    char hello[] = "set /instrumentation/altimeter/indicated-altitude-ft 100\r\n";
+    char hello[] = "set /controls/flight/rudder -1\r\n";
     /*
     ‫/instrumentation/altimeter/indicated-altitude-ft‬‬
      */
@@ -60,8 +63,13 @@ int ConnectCommand::execute(vector<string> param, int index) {
 
     char buffer[1024] = {0};
     int valread = read( client_socket , buffer, 1024);
+
     std::cout<<buffer<<std::endl << flush;
 
     close(client_socket);
     return 3;
+}
+
+bool ConnectCommand::isConnected() {
+    return connected;
 }
