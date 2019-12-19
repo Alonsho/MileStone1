@@ -1,22 +1,11 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <unordered_set>
-#include <algorithm>
 
+#include <iostream>
+#include <algorithm>
+#include <fstream>
+#include "Lexer.h"
 using namespace std;
-vector<string> splitLine(string st);
-void printVector(vector<string>);
-string separateAfterEqual(string);
-vector<string> split(string, string);
-bool arrowIsNext(string, int);
-string arrowDirection(string, int);
-string separateAfterArrow(string);
-vector<string> conditionCheck(string);
-vector<string> noSpaceSign(string, string, int);
-vector<string> lexFile(string);
+
 int main(int argc, char *argv[]) {
-    ///we need to put this in main function.
     try {
         //trying to create a lexer.
         vector<string> commandLex = lexFile(argv[1]);
