@@ -3,8 +3,8 @@
 // Created by dorgamliel on 19/12/2019.
 //
 
-#ifndef EX3_VARIABLE_H
-#define EX3_VARIABLE_H
+#ifndef MileStone1_VARIABLE_H
+#define MileStone1_VARIABLE_H
 
 #include <vector>
 #include <string>
@@ -31,4 +31,4 @@ vector<string> noSpaceSign(string, string, int);
 vector<string> lexFile(string);
 string removeIdentations(string);
 
-#endif //EX3_LEXER_H
+#endif //MileStone1_LEXER_H
