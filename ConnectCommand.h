@@ -15,7 +15,7 @@ class ConnectCommand: public Command {
   ConnectCommand() {
       connected = false;
   }
-  int execute(vector<string> param, int index);
+  int execute(vector<string> param, int index, SymbolTable* symt);
   bool isConnected();
 };
 

@@ -16,7 +16,7 @@ class OpenServerCommand : public Command{
 
  public:
   OpenServerCommand();
-  int execute(vector<string> param, int index);
+  int execute(vector<string> param, int index, SymbolTable* symt);
   void getData();
   bool isConnected();
 

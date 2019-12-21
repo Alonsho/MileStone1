@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alon/CLionProjects/AP/MileStone1/ConnectCommand.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/ConnectCommand.cpp.o"
+  "/home/alon/CLionProjects/AP/MileStone1/DefineVarCommand.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/DefineVarCommand.cpp.o"
   "/home/alon/CLionProjects/AP/MileStone1/Lexer.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/Lexer.cpp.o"
   "/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/OpenServerCommand.cpp.o"
   "/home/alon/CLionProjects/AP/MileStone1/SymbolTable.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/SymbolTable.cpp.o"

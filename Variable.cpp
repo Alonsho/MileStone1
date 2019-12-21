@@ -7,6 +7,8 @@
 
 using namespace std;
 
-Variable::Variable(string, string ) {
+Variable::Variable(string sym, Arrow dir ) {
 
+    path = sym;
+    direction = dir;
 }

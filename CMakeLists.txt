@@ -7,6 +7,6 @@ add_executable(MileStone1 client.cpp Command.h)
 
 add_executable(ServerRun server.cpp)
 
-add_executable(Main main.cpp OpenServerCommand.cpp OpenServerCommand.h SymbolTable.cpp SymbolTable.h Variable.cpp Variable.h ConnectCommand.cpp ConnectCommand.h Lexer.h Lexer.cpp)
+add_executable(Main main.cpp OpenServerCommand.cpp OpenServerCommand.h SymbolTable.cpp SymbolTable.h Variable.cpp Variable.h ConnectCommand.cpp ConnectCommand.h Lexer.h Lexer.cpp DefineVarCommand.cpp DefineVarCommand.h)
 
 SET(CMAKE_CXX_FLAGS -pthread)

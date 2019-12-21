@@ -20,7 +20,7 @@ OpenServerCommand::OpenServerCommand() {
 }
 
 
-int OpenServerCommand::execute(vector<string> param, int index) {
+int OpenServerCommand::execute(vector<string> param, int index, SymbolTable* symt) {
 
 
     int port = stoi(param[index]);

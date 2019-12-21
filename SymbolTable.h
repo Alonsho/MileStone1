@@ -7,10 +7,16 @@
 #include <map>
 #include "Variable.h"
 
+enum class Arrow {Right, Left, None};
+
 using namespace std;
 class SymbolTable {
  private:
-  map<string, Variable> fdsfdnsl;
+  map<string, Variable> varMap;
+
+
+ public:
+  map<string, Variable>* getMap();
 
 };
 

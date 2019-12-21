@@ -4,4 +4,6 @@
 
 #include "SymbolTable.h"
 
-
+map<string, Variable>* SymbolTable::getMap() {
+    return &varMap;
+}

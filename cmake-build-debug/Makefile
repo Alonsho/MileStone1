@@ -176,6 +176,33 @@ ConnectCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/ConnectCommand.cpp.s
 .PHONY : ConnectCommand.cpp.s
 
+DefineVarCommand.o: DefineVarCommand.cpp.o
+
+.PHONY : DefineVarCommand.o
+
+# target to build an object file
+DefineVarCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/DefineVarCommand.cpp.o
+.PHONY : DefineVarCommand.cpp.o
+
+DefineVarCommand.i: DefineVarCommand.cpp.i
+
+.PHONY : DefineVarCommand.i
+
+# target to preprocess a source file
+DefineVarCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/DefineVarCommand.cpp.i
+.PHONY : DefineVarCommand.cpp.i
+
+DefineVarCommand.s: DefineVarCommand.cpp.s
+
+.PHONY : DefineVarCommand.s
+
+# target to generate assembly for a file
+DefineVarCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/DefineVarCommand.cpp.s
+.PHONY : DefineVarCommand.cpp.s
+
 Lexer.o: Lexer.cpp.o
 
 .PHONY : Lexer.o
@@ -379,6 +406,9 @@ help:
 	@echo "... ConnectCommand.o"
 	@echo "... ConnectCommand.i"
 	@echo "... ConnectCommand.s"
+	@echo "... DefineVarCommand.o"
+	@echo "... DefineVarCommand.i"
+	@echo "... DefineVarCommand.s"
 	@echo "... Lexer.o"
 	@echo "... Lexer.i"
 	@echo "... Lexer.s"

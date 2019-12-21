@@ -15,7 +15,7 @@
 
 
 
-int ConnectCommand::execute(vector<string> param, int index) {
+int ConnectCommand::execute(vector<string> param, int index, SymbolTable* symt) {
     //create socket
     int client_socket = socket(AF_INET, SOCK_STREAM, 0);
     if (client_socket == -1) {

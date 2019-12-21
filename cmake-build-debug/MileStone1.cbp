@@ -185,6 +185,12 @@
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/ConnectCommand.h">
 			<Option target="Main"/>
 		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/DefineVarCommand.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/DefineVarCommand.h">
+			<Option target="Main"/>
+		</Unit>
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Lexer.cpp">
 			<Option target="Main"/>
 		</Unit>
