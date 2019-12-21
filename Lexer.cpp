@@ -5,8 +5,6 @@
 #include "Lexer.h"
 using namespace std;
 
-
-
 //this function is responsible of tokenizing the txt file.
 vector<string> lexFile(string str){
     string line;
@@ -30,12 +28,18 @@ vector<string> splitLine(string st){
     vector<string> vec;
     string tempStr, condition;
     bool bracketsFlag = false, quotesFlag = false;
+    if (st.substr(0,3) == "   ") {
+        st = removeIdentations(st);
+    }
     //separating while/if.
     if (st.find("while") == 0|| st.find("if") == 0) {
         return conditionCheck(st);
     }
     //iterate through all chars in string (line in text file).
     for(int i=0;i<st.length();i++) {
+        if (st == "") {
+            continue;
+        }
         //c is the i'th char in string.
         char c = st[i];
         if (c == '=') {
@@ -163,6 +167,7 @@ vector<string> conditionCheck(string st){
     }
     vec.push_back(condition);
     st = st.substr(condition.length() + 1);
+    st = st.substr(0, st.length()-2);
     st.erase(remove(st.begin(),st.end(), ' '), st.end());
     vec.push_back(st);
     vec.push_back("{");
@@ -190,4 +195,13 @@ vector<string> noSpaceSign(string st, string tempStr,int index) {
         vec.push_back(separateAfterEqual(st));
         return vec;
     }
+}
+//removes identations from string.
+string removeIdentations(string st){
+    char c = st[0];
+    int i = 0;
+    while (c == ' ') {
+        c = st[++i];
+    }
+    return st.substr(i);
 }
