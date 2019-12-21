@@ -3,6 +3,7 @@
 //
 
 #include "Variable.h"
+#include "Arrow.h"
 
 
 using namespace std;

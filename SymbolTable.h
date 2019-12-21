@@ -7,16 +7,14 @@
 #include <map>
 #include "Variable.h"
 
-enum class Arrow {Right, Left, None};
-
 using namespace std;
 class SymbolTable {
  private:
-  map<string, Variable> varMap;
+  map<string, Variable*> varMap;
 
 
  public:
-  map<string, Variable>* getMap();
+  map<string, Variable*>* getMap();
 
 };
 

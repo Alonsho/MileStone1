@@ -176,6 +176,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Arrow.h">
+			<Option target="Main"/>
+		</Unit>
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Command.h">
 			<Option target="MileStone1"/>
 		</Unit>

@@ -10,8 +10,8 @@
 #include "SymbolTable.h"
 
 
-void startServer(vector<string> commandLex, int i, OpenServerCommand* server);
-void startClient(vector<string> commandLex, int i, ConnectCommand* client);
+void startServer(vector<string> commandLex, int i, OpenServerCommand* server, SymbolTable* symt);
+void startClient(vector<string> commandLex, int i, ConnectCommand* client, SymbolTable* symt);
 
 using namespace std;
 int main() {

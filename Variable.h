@@ -5,7 +5,8 @@
 #ifndef MILESTONE1__VARIABLE_H_
 #define MILESTONE1__VARIABLE_H_
 #include <string>
-#include "SymbolTable.h"
+#include "Arrow.h"
+
 
 using namespace std;
 class Variable {
