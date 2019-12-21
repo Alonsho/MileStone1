@@ -5,10 +5,10 @@
 #include "DefineVarCommand.h"
 
 
-int DefineVarCommand::execute(vector<std::__cxx11::string> param, int index, class SymbolTable * symt) {
+int DefineVarCommand::execute(vector<string>* param, int index, class SymbolTable * symt) {
     map<string, Variable*>* varMap = symt->getMap();
-    string varName = param[index];
+    string varName = (*param)[index];
     index++;
-    if (param[index] == "->") {
+    if ((*param)[index] == "->") {
     }
 }

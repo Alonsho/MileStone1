@@ -53,16 +53,14 @@ CMAKE_BINARY_DIR = /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Main.dir/all
 all: CMakeFiles/MileStone1.dir/all
-all: CMakeFiles/ServerRun.dir/all
+all: CMakeFiles/Main.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Main.dir/clean
 clean: CMakeFiles/MileStone1.dir/clean
-clean: CMakeFiles/ServerRun.dir/clean
+clean: CMakeFiles/Main.dir/clean
 
 .PHONY : clean
 
@@ -70,6 +68,33 @@ clean: CMakeFiles/ServerRun.dir/clean
 preinstall:
 
 .PHONY : preinstall
+
+#=============================================================================
+# Target rules for target CMakeFiles/MileStone1.dir
+
+# All Build rule for target.
+CMakeFiles/MileStone1.dir/all:
+	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/depend
+	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num= "Built target MileStone1"
+.PHONY : CMakeFiles/MileStone1.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/MileStone1.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MileStone1.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/MileStone1.dir/rule
+
+# Convenience name for target.
+MileStone1: CMakeFiles/MileStone1.dir/rule
+
+.PHONY : MileStone1
+
+# clean rule for target.
+CMakeFiles/MileStone1.dir/clean:
+	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/clean
+.PHONY : CMakeFiles/MileStone1.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/Main.dir
@@ -97,60 +122,6 @@ Main: CMakeFiles/Main.dir/rule
 CMakeFiles/Main.dir/clean:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/clean
 .PHONY : CMakeFiles/Main.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/MileStone1.dir
-
-# All Build rule for target.
-CMakeFiles/MileStone1.dir/all:
-	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/depend
-	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=9,10 "Built target MileStone1"
-.PHONY : CMakeFiles/MileStone1.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/MileStone1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/MileStone1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/MileStone1.dir/rule
-
-# Convenience name for target.
-MileStone1: CMakeFiles/MileStone1.dir/rule
-
-.PHONY : MileStone1
-
-# clean rule for target.
-CMakeFiles/MileStone1.dir/clean:
-	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/clean
-.PHONY : CMakeFiles/MileStone1.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/ServerRun.dir
-
-# All Build rule for target.
-CMakeFiles/ServerRun.dir/all:
-	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/depend
-	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=11,12 "Built target ServerRun"
-.PHONY : CMakeFiles/ServerRun.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/ServerRun.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ServerRun.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/ServerRun.dir/rule
-
-# Convenience name for target.
-ServerRun: CMakeFiles/ServerRun.dir/rule
-
-.PHONY : ServerRun
-
-# clean rule for target.
-CMakeFiles/ServerRun.dir/clean:
-	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/clean
-.PHONY : CMakeFiles/ServerRun.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

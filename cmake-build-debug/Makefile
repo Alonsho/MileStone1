@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Main
-
-# Build rule for target.
-Main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Main
-.PHONY : Main
-
-# fast build rule for target.
-Main/fast:
-	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
-.PHONY : Main/fast
-
-#=============================================================================
 # Target rules for targets named MileStone1
 
 # Build rule for target.
@@ -137,17 +124,17 @@ MileStone1/fast:
 .PHONY : MileStone1/fast
 
 #=============================================================================
-# Target rules for targets named ServerRun
+# Target rules for targets named Main
 
 # Build rule for target.
-ServerRun: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ServerRun
-.PHONY : ServerRun
+Main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Main
+.PHONY : Main
 
 # fast build rule for target.
-ServerRun/fast:
-	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/build
-.PHONY : ServerRun/fast
+Main/fast:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
+.PHONY : Main/fast
 
 ConnectCommand.o: ConnectCommand.cpp.o
 
@@ -311,33 +298,6 @@ Variable.cpp.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Variable.cpp.s
 .PHONY : Variable.cpp.s
 
-client.o: client.cpp.o
-
-.PHONY : client.o
-
-# target to build an object file
-client.cpp.o:
-	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/client.cpp.o
-.PHONY : client.cpp.o
-
-client.i: client.cpp.i
-
-.PHONY : client.i
-
-# target to preprocess a source file
-client.cpp.i:
-	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/client.cpp.i
-.PHONY : client.cpp.i
-
-client.s: client.cpp.s
-
-.PHONY : client.s
-
-# target to generate assembly for a file
-client.cpp.s:
-	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/client.cpp.s
-.PHONY : client.cpp.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -365,33 +325,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-server.o: server.cpp.o
-
-.PHONY : server.o
-
-# target to build an object file
-server.cpp.o:
-	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/server.cpp.o
-.PHONY : server.cpp.o
-
-server.i: server.cpp.i
-
-.PHONY : server.i
-
-# target to preprocess a source file
-server.cpp.i:
-	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/server.cpp.i
-.PHONY : server.cpp.i
-
-server.s: server.cpp.s
-
-.PHONY : server.s
-
-# target to generate assembly for a file
-server.cpp.s:
-	$(MAKE) -f CMakeFiles/ServerRun.dir/build.make CMakeFiles/ServerRun.dir/server.cpp.s
-.PHONY : server.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -399,10 +332,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... Main"
-	@echo "... MileStone1"
 	@echo "... edit_cache"
-	@echo "... ServerRun"
+	@echo "... MileStone1"
+	@echo "... Main"
 	@echo "... ConnectCommand.o"
 	@echo "... ConnectCommand.i"
 	@echo "... ConnectCommand.s"
@@ -421,15 +353,9 @@ help:
 	@echo "... Variable.o"
 	@echo "... Variable.i"
 	@echo "... Variable.s"
-	@echo "... client.o"
-	@echo "... client.i"
-	@echo "... client.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
 .PHONY : help
 
 

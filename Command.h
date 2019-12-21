@@ -11,7 +11,7 @@ using namespace std;
 class Command {
 
  public:
-  virtual int execute(vector<string> param, int index, SymbolTable* symt) = 0;
+  virtual int execute(vector<string>* param, int index, SymbolTable* symt) = 0;
   virtual ~Command() {}
 };
 

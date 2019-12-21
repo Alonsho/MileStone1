@@ -15,7 +15,7 @@
 
 
 
-int ConnectCommand::execute(vector<string> param, int index, SymbolTable* symt) {
+int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt) {
     //create socket
     int client_socket = socket(AF_INET, SOCK_STREAM, 0);
     if (client_socket == -1) {
@@ -23,11 +23,11 @@ int ConnectCommand::execute(vector<string> param, int index, SymbolTable* symt) 
         std::cerr << "Could not create a socket"<<std::endl;
         return -1;
     }
-    string str = param[index].substr(1, param[index].size() - 2);
+    string str = (*param)[index].substr(1, param[index].size() - 2);
     char ip[str.size() + 1];
-    strcpy(ip, param[0].c_str());
+    strcpy(ip, (*param)[0].c_str());
     index++;
-    int port = stoi(param[index]);
+    int port = stoi((*param)[index]);
 
     //We need to create a sockaddr obj to hold address of server
     sockaddr_in address; //in means IP4

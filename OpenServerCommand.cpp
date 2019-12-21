@@ -20,10 +20,10 @@ OpenServerCommand::OpenServerCommand() {
 }
 
 
-int OpenServerCommand::execute(vector<string> param, int index, SymbolTable* symt) {
+int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* symt) {
 
 
-    int port = stoi(param[index]);
+    int port = stoi((*param)[index]);
     //create socket
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
     if (socketfd == -1) {

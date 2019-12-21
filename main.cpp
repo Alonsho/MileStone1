@@ -10,8 +10,8 @@
 #include "SymbolTable.h"
 
 
-void startServer(vector<string> commandLex, int i, OpenServerCommand* server, SymbolTable* symt);
-void startClient(vector<string> commandLex, int i, ConnectCommand* client, SymbolTable* symt);
+void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, SymbolTable* symt);
+void startClient(vector<string>* commandLex, int i, ConnectCommand* client, SymbolTable* symt);
 
 using namespace std;
 int main() {
@@ -29,7 +29,7 @@ int main() {
     }
 
 
-    thread serverThread(startServer, commandLex, i, &server, &symt);
+    thread serverThread(startServer, &commandLex, i, &server, &symt);
     while (!server.isConnected()) {
         cout << "waiting for connection FROM simulator" << endl;
         sleep(1);
@@ -42,7 +42,7 @@ int main() {
         }
     }
 
-    thread clientThread(startClient, commandLex, i, &client, &symt);
+    thread clientThread(startClient, &commandLex, i, &client, &symt);
     while (!client.isConnected()) {
         cout << "Trying to establish connection TO simulator" << endl;
         sleep(1);
@@ -55,11 +55,11 @@ int main() {
     return 0;
 }
 
-void startServer(vector<string> commandLex, int i, OpenServerCommand* server, SymbolTable* symt) {
+void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, SymbolTable* symt) {
     server->execute(commandLex, i+1, symt);
 }
 
-void startClient(vector<string> commandLex, int i, ConnectCommand* client, SymbolTable* symt) {
+void startClient(vector<string>* commandLex, int i, ConnectCommand* client, SymbolTable* symt) {
     client->execute(commandLex, i+1, symt);
 }
 
