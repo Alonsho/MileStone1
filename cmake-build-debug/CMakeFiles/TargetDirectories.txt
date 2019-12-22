@@ -1,5 +1,4 @@
 /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir
-/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/MileStone1.dir
 /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/ServerRun.dir
+/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/MileStone1.dir
+/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir

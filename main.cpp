@@ -8,17 +8,24 @@
 #include "ConnectCommand.h"
 #include "Lexer.h"
 #include "SymbolTable.h"
+#include "PrintCommand.h"
+#include "DefineVarCommand.h"
+#include "SleepCommand.h"
 
 
 void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, SymbolTable* symt);
 void startClient(vector<string>* commandLex, int i, ConnectCommand* client, SymbolTable* symt);
+map<string, Command*>* initializeCommandMap();
 
 using namespace std;
 int main() {
 
 
+    map<string, Command*>* commandMap = initializeCommandMap();
     SymbolTable symt;
     vector<string> commandLex = lexFile("fly_with_func.txt");
+    Command* c = new PrintCommand();
+    c->execute(&commandLex, 1, &symt);
 
     OpenServerCommand server;
     int i = 0;
@@ -61,6 +68,25 @@ void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, S
 
 void startClient(vector<string>* commandLex, int i, ConnectCommand* client, SymbolTable* symt) {
     client->execute(commandLex, i+1, symt);
+}
+
+
+map<string, Command*>* initializeCommandMap() {
+    map<string, Command*> commandMap;
+    OpenServerCommand server;
+    commandMap["openDataServer"] = &server;
+    ConnectCommand client;
+    commandMap["connectControlClient"] = &client;
+    DefineVarCommand def;
+    commandMap["var"] = &def;
+    PrintCommand pr;
+    commandMap["Print"] = &pr;
+    SleepCommand sl;
+    commandMap["Sleep"] = &sl;
+
+    // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
+    return &commandMap;
+
 }
 
 

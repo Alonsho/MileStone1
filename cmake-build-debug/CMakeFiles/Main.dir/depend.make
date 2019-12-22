@@ -25,6 +25,13 @@ CMakeFiles/Main.dir/OpenServerCommand.cpp.o: ../OpenServerCommand.h
 CMakeFiles/Main.dir/OpenServerCommand.cpp.o: ../SymbolTable.h
 CMakeFiles/Main.dir/OpenServerCommand.cpp.o: ../Variable.h
 
+CMakeFiles/Main.dir/PrintCommand.cpp.o: ../Arrow.h
+CMakeFiles/Main.dir/PrintCommand.cpp.o: ../Command.h
+CMakeFiles/Main.dir/PrintCommand.cpp.o: ../PrintCommand.cpp
+CMakeFiles/Main.dir/PrintCommand.cpp.o: ../PrintCommand.h
+CMakeFiles/Main.dir/PrintCommand.cpp.o: ../SymbolTable.h
+CMakeFiles/Main.dir/PrintCommand.cpp.o: ../Variable.h
+
 CMakeFiles/Main.dir/SymbolTable.cpp.o: ../Arrow.h
 CMakeFiles/Main.dir/SymbolTable.cpp.o: ../SymbolTable.cpp
 CMakeFiles/Main.dir/SymbolTable.cpp.o: ../SymbolTable.h
@@ -39,6 +46,7 @@ CMakeFiles/Main.dir/main.cpp.o: ../Command.h
 CMakeFiles/Main.dir/main.cpp.o: ../ConnectCommand.h
 CMakeFiles/Main.dir/main.cpp.o: ../Lexer.h
 CMakeFiles/Main.dir/main.cpp.o: ../OpenServerCommand.h
+CMakeFiles/Main.dir/main.cpp.o: ../PrintCommand.h
 CMakeFiles/Main.dir/main.cpp.o: ../SymbolTable.h
 CMakeFiles/Main.dir/main.cpp.o: ../Variable.h
 CMakeFiles/Main.dir/main.cpp.o: ../main.cpp

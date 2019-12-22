@@ -48,7 +48,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Main.dir/DependInfo.cmake"
   "CMakeFiles/MileStone1.dir/DependInfo.cmake"
-  "CMakeFiles/ServerRun.dir/DependInfo.cmake"
+  "CMakeFiles/Main.dir/DependInfo.cmake"
   )

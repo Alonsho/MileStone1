@@ -25,6 +25,13 @@ CMakeFiles/Main.dir/OpenServerCommand.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.h
  /home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
  /home/alon/CLionProjects/AP/MileStone1/Variable.h
+CMakeFiles/Main.dir/PrintCommand.cpp.o
+ /home/alon/CLionProjects/AP/MileStone1/Arrow.h
+ /home/alon/CLionProjects/AP/MileStone1/Command.h
+ /home/alon/CLionProjects/AP/MileStone1/PrintCommand.cpp
+ /home/alon/CLionProjects/AP/MileStone1/PrintCommand.h
+ /home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
+ /home/alon/CLionProjects/AP/MileStone1/Variable.h
 CMakeFiles/Main.dir/SymbolTable.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/Arrow.h
  /home/alon/CLionProjects/AP/MileStone1/SymbolTable.cpp
@@ -40,6 +47,7 @@ CMakeFiles/Main.dir/main.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/ConnectCommand.h
  /home/alon/CLionProjects/AP/MileStone1/Lexer.h
  /home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.h
+ /home/alon/CLionProjects/AP/MileStone1/PrintCommand.h
  /home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
  /home/alon/CLionProjects/AP/MileStone1/Variable.h
  /home/alon/CLionProjects/AP/MileStone1/main.cpp

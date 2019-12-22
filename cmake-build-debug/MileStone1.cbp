@@ -160,6 +160,18 @@
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.h">
 			<Option target="Main"/>
 		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/PrintCommand.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/PrintCommand.h">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/SleepCommand.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/SleepCommand.h">
+			<Option target="Main"/>
+		</Unit>
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/SymbolTable.cpp">
 			<Option target="Main"/>
 		</Unit>

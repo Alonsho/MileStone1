@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alon/CLionProjects/AP/MileStone1/DefineVarCommand.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/DefineVarCommand.cpp.o"
   "/home/alon/CLionProjects/AP/MileStone1/Lexer.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/Lexer.cpp.o"
   "/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/OpenServerCommand.cpp.o"
+  "/home/alon/CLionProjects/AP/MileStone1/PrintCommand.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/PrintCommand.cpp.o"
+  "/home/alon/CLionProjects/AP/MileStone1/SleepCommand.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/SleepCommand.cpp.o"
   "/home/alon/CLionProjects/AP/MileStone1/SymbolTable.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/SymbolTable.cpp.o"
   "/home/alon/CLionProjects/AP/MileStone1/Variable.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/Variable.cpp.o"
   "/home/alon/CLionProjects/AP/MileStone1/main.cpp" "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles/Main.dir/main.cpp.o"

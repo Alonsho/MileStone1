@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Main.dir/DefineVarCommand.cpp.o"
   "CMakeFiles/Main.dir/Lexer.cpp.o"
   "CMakeFiles/Main.dir/OpenServerCommand.cpp.o"
+  "CMakeFiles/Main.dir/PrintCommand.cpp.o"
+  "CMakeFiles/Main.dir/SleepCommand.cpp.o"
   "CMakeFiles/Main.dir/SymbolTable.cpp.o"
   "CMakeFiles/Main.dir/Variable.cpp.o"
   "CMakeFiles/Main.dir/main.cpp.o"

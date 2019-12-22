@@ -244,6 +244,60 @@ OpenServerCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/OpenServerCommand.cpp.s
 .PHONY : OpenServerCommand.cpp.s
 
+PrintCommand.o: PrintCommand.cpp.o
+
+.PHONY : PrintCommand.o
+
+# target to build an object file
+PrintCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/PrintCommand.cpp.o
+.PHONY : PrintCommand.cpp.o
+
+PrintCommand.i: PrintCommand.cpp.i
+
+.PHONY : PrintCommand.i
+
+# target to preprocess a source file
+PrintCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/PrintCommand.cpp.i
+.PHONY : PrintCommand.cpp.i
+
+PrintCommand.s: PrintCommand.cpp.s
+
+.PHONY : PrintCommand.s
+
+# target to generate assembly for a file
+PrintCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/PrintCommand.cpp.s
+.PHONY : PrintCommand.cpp.s
+
+SleepCommand.o: SleepCommand.cpp.o
+
+.PHONY : SleepCommand.o
+
+# target to build an object file
+SleepCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/SleepCommand.cpp.o
+.PHONY : SleepCommand.cpp.o
+
+SleepCommand.i: SleepCommand.cpp.i
+
+.PHONY : SleepCommand.i
+
+# target to preprocess a source file
+SleepCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/SleepCommand.cpp.i
+.PHONY : SleepCommand.cpp.i
+
+SleepCommand.s: SleepCommand.cpp.s
+
+.PHONY : SleepCommand.s
+
+# target to generate assembly for a file
+SleepCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/SleepCommand.cpp.s
+.PHONY : SleepCommand.cpp.s
+
 SymbolTable.o: SymbolTable.cpp.o
 
 .PHONY : SymbolTable.o
@@ -347,6 +401,12 @@ help:
 	@echo "... OpenServerCommand.o"
 	@echo "... OpenServerCommand.i"
 	@echo "... OpenServerCommand.s"
+	@echo "... PrintCommand.o"
+	@echo "... PrintCommand.i"
+	@echo "... PrintCommand.s"
+	@echo "... SleepCommand.o"
+	@echo "... SleepCommand.i"
+	@echo "... SleepCommand.s"
 	@echo "... SymbolTable.o"
 	@echo "... SymbolTable.i"
 	@echo "... SymbolTable.s"
