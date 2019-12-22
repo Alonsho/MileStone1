@@ -1,5 +1,5 @@
 //
-// Created by alon on 16/12/2019.
+// Created by dorgamliel on 21/12/2019.
 //
 
 #ifndef MILESTONE1__VARIABLE_H_
@@ -10,18 +10,20 @@
 
 using namespace std;
 class Variable {
- private:
-  double value;
-  string path;
-   Arrow direction;
+private:
+    double value = 0;
+    string path;
+    Arrow direction;
 
- public:
-  Variable(string, Arrow);
-  double getValue();
-  string getPath();
-  bool isRightArrow();
-
-
+public:
+    Variable(string sym , Arrow dir)  {
+        path = sym; direction = dir;
+    }
+    double getValue() {return value; }
+    string getPath() { return path; }
+    Arrow getDirection() { return direction; }
+    Arrow setValue(double v) { this->value = v; }
+    Arrow setDirection(Arrow arrow) {this->direction = arrow;}
 };
 
 #endif //MILESTONE1__VARIABLE_H_
