@@ -8,12 +8,14 @@
 #include "Variable.h"
 #include <mutex>
 #include <vector>
+#include "Interpreter.h"
 using namespace std;
 class SymbolTable {
  private:
   map<string, Variable*> varMap;
   array<Variable*, 36> simArr;
   string xmlArr[36];
+  Interpreter* interp;
 
 
 public:
@@ -27,6 +29,7 @@ public:
     void initSimArr();
     void addToMap(Variable*, string);
     string* getXMLArr();
+    Interpreter* getInterpreter();
 
 
 };

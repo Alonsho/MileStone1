@@ -11,21 +11,22 @@
 #include "PrintCommand.h"
 #include "DefineVarCommand.h"
 #include "SleepCommand.h"
+#include "Interpreter.h"
+
 
 
 void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, SymbolTable* symt);
 void startClient(vector<string>* commandLex, int i, ConnectCommand* client, SymbolTable* symt);
-map<string, Command*>* initializeCommandMap();
+map<string, Command*> initializeCommandMap();
+void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt);
 
 using namespace std;
 int main() {
 
 
-    map<string, Command*>* commandMap = initializeCommandMap();
+    map<string, Command*> commandMap = initializeCommandMap();
     SymbolTable symt;
     vector<string> commandLex = lexFile("fly_with_func.txt");
-    Command* c = new PrintCommand();
-    c->execute(&commandLex, 1, &symt);
 
     OpenServerCommand server;
     int i = 0;
@@ -57,6 +58,7 @@ int main() {
     //wait for simulator to start (wait until connection is established) DO NOT USE IF USING DANIELAS PYTHON CODE
     //sleep(45);
 
+    parse(&commandLex, &commandMap, &symt);
     serverThread.join();
     clientThread.join();
     return 0;
@@ -71,35 +73,44 @@ void startClient(vector<string>* commandLex, int i, ConnectCommand* client, Symb
 }
 
 
-map<string, Command*>* initializeCommandMap() {
+map<string, Command*> initializeCommandMap() {
     map<string, Command*> commandMap;
-    OpenServerCommand server;
-    commandMap["openDataServer"] = &server;
-    ConnectCommand client;
-    commandMap["connectControlClient"] = &client;
-    DefineVarCommand def;
-    commandMap["var"] = &def;
-    PrintCommand pr;
-    commandMap["Print"] = &pr;
-    SleepCommand sl;
-    commandMap["Sleep"] = &sl;
+    OpenServerCommand* server = new OpenServerCommand();
+    commandMap["openDataServer"] = server;
+    ConnectCommand* client = new ConnectCommand();
+    commandMap["connectControlClient"] = client;
+    DefineVarCommand* def = new DefineVarCommand();
+    commandMap["var"] = def;
+    PrintCommand* pr = new PrintCommand();
+    commandMap["Print"] = pr;
+    SleepCommand* sl = new SleepCommand;
+    commandMap["Sleep"] = sl;
 
     // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
-    return &commandMap;
+    return commandMap;
 
 }
 
 
-/*
-void parse(vector<string> *lexer) {
+
+void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt) {
     int index = 0;
     while (index < lexer->size()) {
-        Command c = commandMap.get(lexer[index]);
-        if (c != NULL) {
-            index += c.execute(&lexer[index + 1]);
+        if ((*lexer)[index] == "openDataServer") {
+            index += 2;
+            continue;
+        }
+        if ((*lexer)[index] == "connectControlClient") {
+            index += 3;
+            continue;
+        }
+        Command* c = NULL;
+        auto it = commandMap->find((*lexer)[index]);
+        if (it != commandMap->end()) {
+            c= it->second;
+            index += c->execute(lexer, index+1, symt);
         } else {
             index++;
         }
     }
 }
-*/

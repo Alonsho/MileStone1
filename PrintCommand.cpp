@@ -5,10 +5,14 @@
 #include <iostream>
 #include "PrintCommand.h"
 
-
-
 int PrintCommand::execute(vector<string>* param, int index, class SymbolTable * symt) {
-    string toPrint = (*param)[index].substr(1, (*param)[index].size() - 2);
-    cout << toPrint << endl;
+    Interpreter* interp = symt->getInterpreter();
+    if ((*param)[index][0] == '"') {
+        string toPrint = (*param)[index].substr(1, (*param)[index].size() - 2);
+        cout << toPrint << endl;
+    } else {
+        Expression* e = interp->interpret((*param)[index]);
+        cout << e->calculate() << endl;
+    }
     return 2;
 }

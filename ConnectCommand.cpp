@@ -11,12 +11,10 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <cstring>
-
-
-
-
+#include "Interpreter.h"
 
 int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt) {
+    Interpreter* interp = symt->getInterpreter();
     //create socket
     int client_socket = socket(AF_INET, SOCK_STREAM, 0);
     if (client_socket == -1) {
@@ -24,17 +22,17 @@ int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt)
         std::cerr << "Could not create a socket"<<std::endl;
         return -1;
     }
-    string str = (*param)[index].substr(1, param[index].size() - 2);
+    string str = (*param)[index].substr(1, (*param)[index].size() - 2);
     char ip[str.size() + 1];
     strcpy(ip, (*param)[0].c_str());
     index++;
-    int port = stoi((*param)[index]);
+    Expression* e = interp->interpret((*param)[index]);
 
     //We need to create a sockaddr obj to hold address of server
     sockaddr_in address; //in means IP4
     address.sin_family = AF_INET;//IP4
     address.sin_addr.s_addr = inet_addr("127.0.0.1");  //the localhost address
-    address.sin_port = htons(port);
+    address.sin_port = htons(e->calculate());
     //we need to convert our number (both port & localhost)
     // to a number that the network understands.
 

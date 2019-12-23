@@ -5,9 +5,10 @@
 #include <unistd.h>
 #include "SleepCommand.h"
 
-
 int SleepCommand::execute(vector<string> * param, int index, class SymbolTable * symt) {
-    int secs = stoi((*param)[index]);
+    Interpreter* interp = symt->getInterpreter();
+    Expression* e = interp->interpret((*param)[index]);
+    int secs = e->calculate() / 1000;
     sleep(secs);
     return 2;
 }

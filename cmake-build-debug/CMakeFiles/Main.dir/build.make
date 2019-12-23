@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/98/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/98/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -174,6 +174,45 @@ CMakeFiles/Main.dir/SleepCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/SleepCommand.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/CLionProjects/AP/MileStone1/SleepCommand.cpp -o CMakeFiles/Main.dir/SleepCommand.cpp.s
 
+CMakeFiles/Main.dir/AssignCommand.cpp.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/AssignCommand.cpp.o: ../AssignCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Main.dir/AssignCommand.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/AssignCommand.cpp.o -c /home/alon/CLionProjects/AP/MileStone1/AssignCommand.cpp
+
+CMakeFiles/Main.dir/AssignCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/AssignCommand.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/CLionProjects/AP/MileStone1/AssignCommand.cpp > CMakeFiles/Main.dir/AssignCommand.cpp.i
+
+CMakeFiles/Main.dir/AssignCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/AssignCommand.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/CLionProjects/AP/MileStone1/AssignCommand.cpp -o CMakeFiles/Main.dir/AssignCommand.cpp.s
+
+CMakeFiles/Main.dir/Interpreter.cpp.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/Interpreter.cpp.o: ../Interpreter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Main.dir/Interpreter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/Interpreter.cpp.o -c /home/alon/CLionProjects/AP/MileStone1/Interpreter.cpp
+
+CMakeFiles/Main.dir/Interpreter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/Interpreter.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/CLionProjects/AP/MileStone1/Interpreter.cpp > CMakeFiles/Main.dir/Interpreter.cpp.i
+
+CMakeFiles/Main.dir/Interpreter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/Interpreter.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/CLionProjects/AP/MileStone1/Interpreter.cpp -o CMakeFiles/Main.dir/Interpreter.cpp.s
+
+CMakeFiles/Main.dir/Expression.cpp.o: CMakeFiles/Main.dir/flags.make
+CMakeFiles/Main.dir/Expression.cpp.o: ../Expression.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Main.dir/Expression.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Main.dir/Expression.cpp.o -c /home/alon/CLionProjects/AP/MileStone1/Expression.cpp
+
+CMakeFiles/Main.dir/Expression.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Main.dir/Expression.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alon/CLionProjects/AP/MileStone1/Expression.cpp > CMakeFiles/Main.dir/Expression.cpp.i
+
+CMakeFiles/Main.dir/Expression.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Main.dir/Expression.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alon/CLionProjects/AP/MileStone1/Expression.cpp -o CMakeFiles/Main.dir/Expression.cpp.s
+
 # Object files for target Main
 Main_OBJECTS = \
 "CMakeFiles/Main.dir/main.cpp.o" \
@@ -184,7 +223,10 @@ Main_OBJECTS = \
 "CMakeFiles/Main.dir/Lexer.cpp.o" \
 "CMakeFiles/Main.dir/DefineVarCommand.cpp.o" \
 "CMakeFiles/Main.dir/PrintCommand.cpp.o" \
-"CMakeFiles/Main.dir/SleepCommand.cpp.o"
+"CMakeFiles/Main.dir/SleepCommand.cpp.o" \
+"CMakeFiles/Main.dir/AssignCommand.cpp.o" \
+"CMakeFiles/Main.dir/Interpreter.cpp.o" \
+"CMakeFiles/Main.dir/Expression.cpp.o"
 
 # External object files for target Main
 Main_EXTERNAL_OBJECTS =
@@ -198,9 +240,12 @@ Main: CMakeFiles/Main.dir/Lexer.cpp.o
 Main: CMakeFiles/Main.dir/DefineVarCommand.cpp.o
 Main: CMakeFiles/Main.dir/PrintCommand.cpp.o
 Main: CMakeFiles/Main.dir/SleepCommand.cpp.o
+Main: CMakeFiles/Main.dir/AssignCommand.cpp.o
+Main: CMakeFiles/Main.dir/Interpreter.cpp.o
+Main: CMakeFiles/Main.dir/Expression.cpp.o
 Main: CMakeFiles/Main.dir/build.make
 Main: CMakeFiles/Main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable Main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

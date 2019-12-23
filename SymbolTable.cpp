@@ -4,11 +4,13 @@
 //
 
 #include "SymbolTable.h"
+#include "Command.h"
 std::mutex mutex_lock;
 
 SymbolTable::SymbolTable() {
     initXMLArr();
     initSimArr();
+    interp = new Interpreter();
 }
 
 map<string, Variable*>* SymbolTable::getVarMap() {
@@ -22,6 +24,7 @@ array<Variable*, 36> SymbolTable::getSimMap() {
 //this function updates variable and simulator (according to arrow direction).
 string SymbolTable::editVarMap(string key, double value) {
     mutex_lock.lock();
+    interp->setVariables((key + "=" + to_string(value)));
     this->varMap.find(key)->second->setValue(value);
     //if arrow points right, update simulator.
     if (this->varMap.find(key)->second->getDirection() == Arrow::Right){
@@ -39,15 +42,19 @@ void SymbolTable::editSimArr(int key, double value) {
     //update variable if arrow points left.
     if (this->simArr[key]->getDirection() == Arrow::Left){
         this->simArr[key]->setValue(value);
+        string varName = simArr[key]->getName();
+        interp->setVariables((varName + "=" + to_string(value)));
     }
     mutex_lock.unlock();
 }
 
 //this function adds a new variable to both map and array.
-void SymbolTable::addToMapAndArr(Variable* var, string st, int index) {
+void SymbolTable::addToMapAndArr(Variable* var, string name, int index) {
     mutex_lock.lock();
-    this->varMap.insert({st, var});
+    this->varMap.insert({name, var});
     this->simArr[index+1] = var;
+    var->setName(name);
+    interp->setVariables((name + "=" + to_string(var->getValue())));
     mutex_lock.unlock();
 }
 
@@ -55,12 +62,14 @@ void SymbolTable::addToMapAndArr(Variable* var, string st, int index) {
 void SymbolTable::addToMap(Variable* var, string st){
     mutex_lock.lock();
     this->varMap.insert({st, var});
+    string varName = var->getName();
+    interp->setVariables((varName + "=" + to_string(var->getValue())));
     mutex_lock.unlock();
 }
 
 //initializing XML array (XML file content).
 void SymbolTable::initXMLArr() {
-    xmlArr[0] = "/instrumentation/airspeed-indicator/indicated-speed-kt";
+    xmlArr[0] = ("/instrumentation/airspeed-indicator/indicated-speed-kt");
     xmlArr[1] = "/sim/time/warp";
     xmlArr[2] = "/controls/switches/magnetos";
     xmlArr[3] = "/instrumentation/heading-indicator/offset-deg";
@@ -103,9 +112,14 @@ string* SymbolTable::getXMLArr(){return this->xmlArr;}
 
 //initializing sim array.
 void SymbolTable::initSimArr() {
-    int size = sizeof(this->simArr) / sizeof(this->simArr[1]);
+    int size = simArr.size();
     for (int i=0; i < size; i++) {
-        Variable* v = new Variable(this->getXMLArr()[i], Arrow::None);
+        Variable* v = new Variable("", this->getXMLArr()[i], Arrow::None);
         this->simArr[i] = v;
     }
+}
+
+
+Interpreter* SymbolTable::getInterpreter() {
+    return interp;
 }

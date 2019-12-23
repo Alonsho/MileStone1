@@ -13,16 +13,28 @@ vector
 -
 SymbolTable.h
 /home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
+Interpreter.h
+/home/alon/CLionProjects/AP/MileStone1/Interpreter.h
 
-/home/alon/CLionProjects/AP/MileStone1/PrintCommand.cpp
-iostream
--
-PrintCommand.h
-/home/alon/CLionProjects/AP/MileStone1/PrintCommand.h
-
-/home/alon/CLionProjects/AP/MileStone1/PrintCommand.h
+/home/alon/CLionProjects/AP/MileStone1/Expression.h
 string
 -
+
+/home/alon/CLionProjects/AP/MileStone1/Interpreter.h
+Expression.h
+/home/alon/CLionProjects/AP/MileStone1/Expression.h
+map
+-
+queue
+-
+stack
+-
+
+/home/alon/CLionProjects/AP/MileStone1/SymbolTable.cpp
+SymbolTable.h
+/home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
+SymbolTable.h
+/home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
 Command.h
 /home/alon/CLionProjects/AP/MileStone1/Command.h
 
@@ -31,6 +43,12 @@ map
 -
 Variable.h
 /home/alon/CLionProjects/AP/MileStone1/Variable.h
+mutex
+-
+vector
+-
+Interpreter.h
+/home/alon/CLionProjects/AP/MileStone1/Interpreter.h
 
 /home/alon/CLionProjects/AP/MileStone1/Variable.h
 string

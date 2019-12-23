@@ -13,17 +13,20 @@ class Variable {
 private:
     double value = 0;
     string path;
+    string name;
     Arrow direction;
 
 public:
-    Variable(string sym , Arrow dir)  {
-        path = sym; direction = dir;
+    Variable(string st, string sym, Arrow dir)  {
+        path = sym; direction = dir; name = st;
     }
     double getValue() {return value; }
     string getPath() { return path; }
     Arrow getDirection() { return direction; }
-    Arrow setValue(double v) { this->value = v; }
-    Arrow setDirection(Arrow arrow) {this->direction = arrow;}
+    void setValue(double v) { this->value = v; }
+    void setDirection(Arrow arrow) {this->direction = arrow;}
+    string getName() {return name;}
+    void setName(string st) {name = st;}
 };
 
 #endif //MILESTONE1__VARIABLE_H_

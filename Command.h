@@ -4,8 +4,10 @@
 
 #ifndef MILESTONE1__COMMAND_H_
 #define MILESTONE1__COMMAND_H_
-# include <vector>
+#include <vector>
 #include "SymbolTable.h"
+#include "Interpreter.h"
+
 using namespace std;
 
 class Command {

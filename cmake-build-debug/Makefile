@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/98/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /snap/clion/99/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/98/bin/cmake/linux/bin/cmake -E remove -f
+RM = /snap/clion/99/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/alon/CLionProjects/AP/MileStone1/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/snap/clion/98/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/99/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/snap/clion/98/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/99/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -111,19 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named MileStone1
-
-# Build rule for target.
-MileStone1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MileStone1
-.PHONY : MileStone1
-
-# fast build rule for target.
-MileStone1/fast:
-	$(MAKE) -f CMakeFiles/MileStone1.dir/build.make CMakeFiles/MileStone1.dir/build
-.PHONY : MileStone1/fast
-
-#=============================================================================
 # Target rules for targets named Main
 
 # Build rule for target.
@@ -135,6 +122,33 @@ Main: cmake_check_build_system
 Main/fast:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/build
 .PHONY : Main/fast
+
+AssignCommand.o: AssignCommand.cpp.o
+
+.PHONY : AssignCommand.o
+
+# target to build an object file
+AssignCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/AssignCommand.cpp.o
+.PHONY : AssignCommand.cpp.o
+
+AssignCommand.i: AssignCommand.cpp.i
+
+.PHONY : AssignCommand.i
+
+# target to preprocess a source file
+AssignCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/AssignCommand.cpp.i
+.PHONY : AssignCommand.cpp.i
+
+AssignCommand.s: AssignCommand.cpp.s
+
+.PHONY : AssignCommand.s
+
+# target to generate assembly for a file
+AssignCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/AssignCommand.cpp.s
+.PHONY : AssignCommand.cpp.s
 
 ConnectCommand.o: ConnectCommand.cpp.o
 
@@ -189,6 +203,60 @@ DefineVarCommand.s: DefineVarCommand.cpp.s
 DefineVarCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/DefineVarCommand.cpp.s
 .PHONY : DefineVarCommand.cpp.s
+
+Expression.o: Expression.cpp.o
+
+.PHONY : Expression.o
+
+# target to build an object file
+Expression.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Expression.cpp.o
+.PHONY : Expression.cpp.o
+
+Expression.i: Expression.cpp.i
+
+.PHONY : Expression.i
+
+# target to preprocess a source file
+Expression.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Expression.cpp.i
+.PHONY : Expression.cpp.i
+
+Expression.s: Expression.cpp.s
+
+.PHONY : Expression.s
+
+# target to generate assembly for a file
+Expression.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Expression.cpp.s
+.PHONY : Expression.cpp.s
+
+Interpreter.o: Interpreter.cpp.o
+
+.PHONY : Interpreter.o
+
+# target to build an object file
+Interpreter.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Interpreter.cpp.o
+.PHONY : Interpreter.cpp.o
+
+Interpreter.i: Interpreter.cpp.i
+
+.PHONY : Interpreter.i
+
+# target to preprocess a source file
+Interpreter.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Interpreter.cpp.i
+.PHONY : Interpreter.cpp.i
+
+Interpreter.s: Interpreter.cpp.s
+
+.PHONY : Interpreter.s
+
+# target to generate assembly for a file
+Interpreter.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Interpreter.cpp.s
+.PHONY : Interpreter.cpp.s
 
 Lexer.o: Lexer.cpp.o
 
@@ -386,15 +454,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... MileStone1"
 	@echo "... Main"
+	@echo "... edit_cache"
+	@echo "... AssignCommand.o"
+	@echo "... AssignCommand.i"
+	@echo "... AssignCommand.s"
 	@echo "... ConnectCommand.o"
 	@echo "... ConnectCommand.i"
 	@echo "... ConnectCommand.s"
 	@echo "... DefineVarCommand.o"
 	@echo "... DefineVarCommand.i"
 	@echo "... DefineVarCommand.s"
+	@echo "... Expression.o"
+	@echo "... Expression.i"
+	@echo "... Expression.s"
+	@echo "... Interpreter.o"
+	@echo "... Interpreter.i"
+	@echo "... Interpreter.s"
 	@echo "... Lexer.o"
 	@echo "... Lexer.i"
 	@echo "... Lexer.s"

@@ -6,11 +6,8 @@
 #include <iostream>
 #include <netinet/in.h>
 #include <unistd.h>
-#include <thread>
 #include <functional>
 #include "OpenServerCommand.h"
-
-
 
 using namespace std;
 
@@ -21,9 +18,11 @@ OpenServerCommand::OpenServerCommand() {
 
 
 int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* symt) {
+    Interpreter* interp = symt->getInterpreter();
 
 
-    int port = stoi((*param)[index]);
+
+    Expression* e = interp->interpret((*param)[index]);
     //create socket
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
     if (socketfd == -1) {
@@ -37,7 +36,7 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
     sockaddr_in address; //in means IP4
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY; //give me any IP allocated for my machine
-    address.sin_port = htons(port);
+    address.sin_port = htons(e->calculate());
     int addrlen = sizeof(address);
     //we need to convert our number
     // to a number that the network understands.
