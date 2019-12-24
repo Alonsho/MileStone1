@@ -48,30 +48,6 @@ int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt)
     sendData(symt);
     //if here we made a connection
     char hello[] = "set /controls/flight/rudder -1\r\n";
-    /*
-    ‫/instrumentation/altimeter/indicated-altitude-ft‬‬
-     */
-    /* SYBOLTABLE CHECK HERE
-     * for (int i = 0; i < param.size(); i++) {
-        if (param[i] == "var") {
-            DefineVarCommand com;
-            i += com.execute(param, i, symt);
-            //else if already initialized, change value.
-        } else if (symt->getVarMap()->find(param[i]) != symt->getVarMap()->end()){
-            string ind = symt->editVarMap(param[i], stod(param[i+2]));
-            if (ind != "") {
-                string a = "set ";
-                string b = symt->getVarMap()->find(param[i])->second->getPath();
-                a += b;
-                string c = " " + to_string(symt->getVarMap()->find(param[i])->second->getValue()) + "\r\n";
-                a += c;
-                int len = a.length();
-                char arr[len];
-                strcpy(arr,a.c_str());
-                int is_sent = send(client_socket , arr , strlen(arr) , 0 );
-            }
-        }
-    }*/
     ///
     //SEND THE SERVER IF A VARIABLE VALUE HAS BEEN CHANGED (AND THE ARROW POINTS RIGHT) (MAYBE IN A SEPERATE FUNCTION)
     int is_sent = send(client_socket , hello , strlen(hello) , 0);
