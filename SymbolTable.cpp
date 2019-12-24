@@ -5,6 +5,7 @@
 
 #include "SymbolTable.h"
 #include "Command.h"
+#include <queue>
 std::mutex mutex_lock;
 
 SymbolTable::SymbolTable() {
@@ -24,11 +25,19 @@ array<Variable*, 36> SymbolTable::getSimMap() {
 //this function updates variable and simulator (according to arrow direction).
 string SymbolTable::editVarMap(string key, double value) {
     mutex_lock.lock();
+    //create variable value interpretation.
     interp->setVariables((key + "=" + to_string(value)));
+    //change value.
     this->varMap.find(key)->second->setValue(value);
     //if arrow points right, update simulator.
     if (this->varMap.find(key)->second->getDirection() == Arrow::Right){
-        //UPDATE SIMULATOR
+        string st1 = "set ";
+        string st2 = this->varMap.find(key)->second->getPath();
+        string st3 = st1.append(st2);
+        string st4 = to_string(this->varMap.find(key)->second->getValue());
+        st3 = st3.append(" ");
+        string st5 = st3.append(st4);
+        this->infoQueue.push(st5);
         mutex_lock.unlock();
         return key;
     }
@@ -41,8 +50,10 @@ void SymbolTable::editSimArr(int key, double value) {
     mutex_lock.lock();
     //update variable if arrow points left.
     if (this->simArr[key]->getDirection() == Arrow::Left){
+        //update new value of variable.
         this->simArr[key]->setValue(value);
         string varName = simArr[key]->getName();
+        //interpret new value of variable.
         interp->setVariables((varName + "=" + to_string(value)));
     }
     mutex_lock.unlock();
@@ -54,6 +65,7 @@ void SymbolTable::addToMapAndArr(Variable* var, string name, int index) {
     this->varMap.insert({name, var});
     this->simArr[index+1] = var;
     var->setName(name);
+    //adding it to interpreter, so that in "execute" command we'll get a double type.
     interp->setVariables((name + "=" + to_string(var->getValue())));
     mutex_lock.unlock();
 }

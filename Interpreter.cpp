@@ -16,7 +16,6 @@ Interpreter::~Interpreter() {
 }
 
 
-
 void Interpreter::setVariables(string str) {
     char* input = &str[0];
     char* tok = strtok(input, "=");
@@ -28,12 +27,15 @@ void Interpreter::setVariables(string str) {
         varName = tok;
         tok = strtok(NULL, ";");
         varValue = tok;
+        //if var name is legal, and value is legal.
         if (regex_match(varName, name) && regex_match(varValue, value)) {
             try {
                 map<string, double>::iterator it = this->vars.find(varName);
+                //if a variable appears again in file, update its new value (to enable calculation in case of expr).
                 if (it != this->vars.end()) {
                     it->second = stod(varValue);
                 } else {
+                    //add new variable to interpreter map.
                     this->vars.insert({varName, stod(varValue)});
                 }
             } catch (...) {
@@ -57,13 +59,13 @@ Expression* Interpreter::interpret(string str) {
     str.erase(remove(str.begin(), str.end(), ' '), str.end());
     token = str.substr(0, 1);
     if (stringIsOperator(token)) {
-        if (token == "-" && str.substr(1, 1) == "(") {
+        if (token == "-" && !isdigit(str.substr(1, 1)[0])) {
             insertOperator("-u", &operands, &operators);
         } else if (token == "-" && isdigit(str.substr(1, 1)[0])) {
             pos = str.find_first_of("/*+-()<>=!", 1);
             token = str.substr(0, pos);
             operands.push(token);
-        } else if (token == "+" && str.substr(1, 1) == "(") {
+        } else if (token == "+" && !isdigit(str.substr(1, 1)[0])) {
             insertOperator("+u", &operands, &operators);
         } else if (token == "+" && isdigit(str.substr(1, 1)[0])) {
             pos = str.find_first_of("/*+-()<>=!", 1);

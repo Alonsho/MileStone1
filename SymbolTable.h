@@ -16,7 +16,8 @@ class SymbolTable {
   array<Variable*, 36> simArr;
   string xmlArr[36];
   Interpreter* interp;
-
+  queue<string> infoQueue;
+  bool done;
 
 public:
     SymbolTable();
@@ -30,6 +31,7 @@ public:
     void addToMap(Variable*, string);
     string* getXMLArr();
     Interpreter* getInterpreter();
+    bool isDone(){return done; };
 
 
 };
