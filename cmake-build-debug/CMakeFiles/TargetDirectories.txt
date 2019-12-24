@@ -1,3 +1,0 @@
-/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/CMakeFiles/Main.dir
-/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/CMakeFiles/edit_cache.dir
