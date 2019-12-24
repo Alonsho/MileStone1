@@ -3,6 +3,7 @@
 //
 
 #include "WhileCommand.h"
+#include "ConditionParser.h"
 
 int WhileCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
     map<string, Command*> commandMap = initializeCommandMap();

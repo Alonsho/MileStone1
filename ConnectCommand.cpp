@@ -45,24 +45,7 @@ int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt)
         std::cout<<"Client is now connected to server" <<std::endl;
         connected = true;
     }
-    sendData(symt);
-    //if here we made a connection
-    char hello[] = "set /controls/flight/rudder -1\r\n";
-    ///
-    //SEND THE SERVER IF A VARIABLE VALUE HAS BEEN CHANGED (AND THE ARROW POINTS RIGHT) (MAYBE IN A SEPERATE FUNCTION)
-    int is_sent = send(client_socket , hello , strlen(hello) , 0);
-    if (is_sent == -1) {
-        std::cout<<"Error sending message"<<std::endl;
-    } else {
-        std::cout<<"Hello message sent to server" <<std::endl;
-    }
-
-    char buffer[1024] = {0};
-    int valread = read( client_socket , buffer, 1024);
-
-    std::cout<<buffer<<std::endl << flush;
-
-    close(client_socket);
+    sendData(symt, client_socket);
     return 3;
 }
 
@@ -74,8 +57,10 @@ bool ConnectCommand::isConnected() {
 void ConnectCommand::sendData(SymbolTable* symt, int client_socket) {
     queue <string> q = symt->getQueue();
     while (!symt->isDone()) {
-        if (q.size() != 0) {
-            string toSend = q.pop();
+        if (!q.empty()) {
+            char toSend[q.front().size()+1];
+            strcpy(toSend, q.front().c_str());
+            q.pop();
             int is_sent = send(client_socket , toSend , strlen(toSend) , 0);
             if (is_sent == -1) {
                 std::cout<<"Error sending message"<<std::endl;
