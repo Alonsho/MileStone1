@@ -12,6 +12,7 @@
 #include "DefineVarCommand.h"
 #include "SleepCommand.h"
 #include "Interpreter.h"
+#include "AssignCommand.h"
 
 
 
@@ -85,6 +86,8 @@ map<string, Command*> initializeCommandMap() {
     commandMap["Print"] = pr;
     SleepCommand* sl = new SleepCommand;
     commandMap["Sleep"] = sl;
+    AssignCommand* as = new AssignCommand();
+    commandMap["="] = as;
 
     // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
     return commandMap;
@@ -92,7 +95,7 @@ map<string, Command*> initializeCommandMap() {
 }
 
 
-
+//parsing each line of text file. MISSING - editing variables (from lex index 116).
 void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt) {
     int index = 0;
     while (index < lexer->size()) {

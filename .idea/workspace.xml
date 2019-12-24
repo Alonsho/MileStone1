@@ -14,6 +14,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb7fe1ea-dcea-4823-a9de-c2bd136b6b84" name="Default Changelist" comment="changed to send pointer to vector instead of reference">
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/AssignCommand.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/DefineVarCommand.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/Expression.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/Interpreter.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/Lexer.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/PrintCommand.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Main.dir/SleepCommand.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fly_with_func.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ConnectCommand.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ConnectCommand.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
@@ -164,7 +172,7 @@
       <workItem from="1576784572452" duration="2793000" />
       <workItem from="1576931360182" duration="9083000" />
       <workItem from="1577026138837" duration="18540000" />
-      <workItem from="1577172928935" duration="22071000" />
+      <workItem from="1577172928935" duration="22386000" />
     </task>
     <task id="LOCAL-00001" summary="as">
       <created>1576528759925</created>
