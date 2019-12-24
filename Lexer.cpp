@@ -151,7 +151,7 @@ bool arrowIsNext(string str, int count) {
 }
 //checks arrow directions and returns the arrow.
 string arrowDirection(string str, int count) {
-    if (str.substr(count+1, 2) == "<-"){
+    if (str.substr(count, 2) == "<-"){
         return "<-";
     }
     return "->";
