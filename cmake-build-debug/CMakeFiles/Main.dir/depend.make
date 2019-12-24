@@ -14,8 +14,13 @@ CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Arrow.h
 CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Command.h
 CMakeFiles/Main.dir/ConditionParser.cpp.o: ../ConditionParser.cpp
 CMakeFiles/Main.dir/ConditionParser.cpp.o: ../ConditionParser.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../ConnectCommand.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../DefineVarCommand.h
 CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Expression.h
 CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Interpreter.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../OpenServerCommand.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../PrintCommand.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../SleepCommand.h
 CMakeFiles/Main.dir/ConditionParser.cpp.o: ../SymbolTable.h
 CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Variable.h
 

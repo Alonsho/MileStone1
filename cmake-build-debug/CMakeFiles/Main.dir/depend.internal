@@ -15,8 +15,13 @@ CMakeFiles/Main.dir/ConditionParser.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/Command.h
  /home/alon/CLionProjects/AP/MileStone1/ConditionParser.cpp
  /home/alon/CLionProjects/AP/MileStone1/ConditionParser.h
+ /home/alon/CLionProjects/AP/MileStone1/ConnectCommand.h
+ /home/alon/CLionProjects/AP/MileStone1/DefineVarCommand.h
  /home/alon/CLionProjects/AP/MileStone1/Expression.h
  /home/alon/CLionProjects/AP/MileStone1/Interpreter.h
+ /home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.h
+ /home/alon/CLionProjects/AP/MileStone1/PrintCommand.h
+ /home/alon/CLionProjects/AP/MileStone1/SleepCommand.h
  /home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
  /home/alon/CLionProjects/AP/MileStone1/Variable.h
 CMakeFiles/Main.dir/ConnectCommand.cpp.o
