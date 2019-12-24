@@ -17,6 +17,8 @@ class ConnectCommand: public Command {
   }
   int execute(vector<string>* param, int index, SymbolTable* symt);
   bool isConnected();
+  void sendData(SymbolTable *symt);
+  void sendData(SymbolTable *symt, int client_socket);
 };
 
 #endif //MILESTONE1__CONNECTCOMMAND_H_

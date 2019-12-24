@@ -15,6 +15,7 @@
 
 
 
+
 void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, SymbolTable* symt);
 void startClient(vector<string>* commandLex, int i, ConnectCommand* client, SymbolTable* symt);
 map<string, Command*> initializeCommandMap();
@@ -61,6 +62,7 @@ int main() {
     parse(&commandLex, &commandMap, &symt);
     serverThread.join();
     clientThread.join();
+    delete &symt;
     return 0;
 }
 
@@ -75,15 +77,15 @@ void startClient(vector<string>* commandLex, int i, ConnectCommand* client, Symb
 
 map<string, Command*> initializeCommandMap() {
     map<string, Command*> commandMap;
-    OpenServerCommand* server = new OpenServerCommand();
+    auto* server = new OpenServerCommand();
     commandMap["openDataServer"] = server;
-    ConnectCommand* client = new ConnectCommand();
+    auto* client = new ConnectCommand();
     commandMap["connectControlClient"] = client;
-    DefineVarCommand* def = new DefineVarCommand();
+    auto* def = new DefineVarCommand();
     commandMap["var"] = def;
-    PrintCommand* pr = new PrintCommand();
+    auto* pr = new PrintCommand();
     commandMap["Print"] = pr;
-    SleepCommand* sl = new SleepCommand;
+    auto* sl = new SleepCommand;
     commandMap["Sleep"] = sl;
 
     // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
@@ -113,4 +115,5 @@ void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable
             index++;
         }
     }
+    symt->setDone();
 }

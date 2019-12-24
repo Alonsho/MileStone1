@@ -10,6 +10,15 @@ CMakeFiles/Main.dir/AssignCommand.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/Interpreter.h
  /home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
  /home/alon/CLionProjects/AP/MileStone1/Variable.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o
+ /home/alon/CLionProjects/AP/MileStone1/Arrow.h
+ /home/alon/CLionProjects/AP/MileStone1/Command.h
+ /home/alon/CLionProjects/AP/MileStone1/ConditionParser.cpp
+ /home/alon/CLionProjects/AP/MileStone1/ConditionParser.h
+ /home/alon/CLionProjects/AP/MileStone1/Expression.h
+ /home/alon/CLionProjects/AP/MileStone1/Interpreter.h
+ /home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
+ /home/alon/CLionProjects/AP/MileStone1/Variable.h
 CMakeFiles/Main.dir/ConnectCommand.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/Arrow.h
  /home/alon/CLionProjects/AP/MileStone1/Command.h
@@ -78,6 +87,16 @@ CMakeFiles/Main.dir/Variable.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/Arrow.h
  /home/alon/CLionProjects/AP/MileStone1/Variable.cpp
  /home/alon/CLionProjects/AP/MileStone1/Variable.h
+CMakeFiles/Main.dir/WhileCommand.cpp.o
+ /home/alon/CLionProjects/AP/MileStone1/Arrow.h
+ /home/alon/CLionProjects/AP/MileStone1/Command.h
+ /home/alon/CLionProjects/AP/MileStone1/ConditionParser.h
+ /home/alon/CLionProjects/AP/MileStone1/Expression.h
+ /home/alon/CLionProjects/AP/MileStone1/Interpreter.h
+ /home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
+ /home/alon/CLionProjects/AP/MileStone1/Variable.h
+ /home/alon/CLionProjects/AP/MileStone1/WhileCommand.cpp
+ /home/alon/CLionProjects/AP/MileStone1/WhileCommand.h
 CMakeFiles/Main.dir/main.cpp.o
  /home/alon/CLionProjects/AP/MileStone1/Arrow.h
  /home/alon/CLionProjects/AP/MileStone1/Command.h

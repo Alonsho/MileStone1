@@ -93,6 +93,12 @@
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/AssignCommand.h">
 			<Option target="Main"/>
 		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/ConditionParser.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/ConditionParser.h">
+			<Option target="Main"/>
+		</Unit>
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/ConnectCommand.cpp">
 			<Option target="Main"/>
 		</Unit>
@@ -151,6 +157,12 @@
 			<Option target="Main"/>
 		</Unit>
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Variable.h">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/WhileCommand.cpp">
+			<Option target="Main"/>
+		</Unit>
+		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/WhileCommand.h">
 			<Option target="Main"/>
 		</Unit>
 		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/main.cpp">
