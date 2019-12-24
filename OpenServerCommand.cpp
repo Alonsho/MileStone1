@@ -72,7 +72,7 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
     valread = read( client_socket , buffer, 1024);
     connected = true;
     std::cout<<buffer<<std::endl << flush;
-    getData();
+    getData(symt);
 
 
 
@@ -89,8 +89,8 @@ void OpenServerCommand::getData(SymbolTable* symt) {
         size_t commaPos = 0;
         size_t prev = 0;
         string token;
+        int i = 0;
         while (pos != string::npos) {
-            int i = 0;
             pos = s.find("\n", pos);
             commaPos = s.find(",", commaPos);
             if (commaPos < pos) {
