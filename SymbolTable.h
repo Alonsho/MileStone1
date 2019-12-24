@@ -32,6 +32,8 @@ public:
     string* getXMLArr();
     Interpreter* getInterpreter();
     bool isDone(){return done; };
+    void setDone(){ this->done = true;}
+    queue<string> getQueue(){ return this->infoQueue; }
 
 
 };
