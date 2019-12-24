@@ -11,7 +11,6 @@ class WhileCommand : public ConditionParser{
  public:
   WhileCommand() {};
   int execute(vector<string>* param, int index, SymbolTable* symt);
-  map<string, Command*> initializeCommandMap();
 };
 
 #endif //MILESTONE1__WHILECOMMAND_H_
