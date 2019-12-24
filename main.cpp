@@ -13,9 +13,7 @@
 #include "SleepCommand.h"
 #include "Interpreter.h"
 #include "AssignCommand.h"
-
-
-
+#include "WhileCommand.h"
 
 void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, SymbolTable* symt);
 void startClient(vector<string>* commandLex, int i, ConnectCommand* client, SymbolTable* symt);
@@ -63,7 +61,6 @@ int main() {
     parse(&commandLex, &commandMap, &symt);
     serverThread.join();
     clientThread.join();
-    delete &symt;
     return 0;
 }
 
@@ -86,10 +83,12 @@ map<string, Command*> initializeCommandMap() {
     commandMap["var"] = def;
     auto* pr = new PrintCommand();
     commandMap["Print"] = pr;
-    auto* sl = new SleepCommand;
+    auto* sl = new SleepCommand();
     commandMap["Sleep"] = sl;
     AssignCommand* as = new AssignCommand();
     commandMap["="] = as;
+    auto* wh = new WhileCommand();
+    commandMap["while"] = wh;
 
     // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
     return commandMap;

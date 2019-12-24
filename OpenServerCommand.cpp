@@ -91,11 +91,16 @@ void OpenServerCommand::getData(SymbolTable* symt) {
         i = 0;
         while (buffer[i] != 0) {
             if (buffer[i] == ',') {
+                if (value == "") {
+                    i++;
+                    continue;
+                }
                 symt->editSimArr(j, stod(value));
                 j++;
                 value = "";
             } else if (buffer[i] == '\n') {
                 if (value == "") {
+                    j = 0;
                     i++;
                     continue;
                 }
