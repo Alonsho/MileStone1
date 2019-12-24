@@ -37,7 +37,8 @@ string SymbolTable::editVarMap(string key, double value) {
         string st4 = to_string(this->varMap.find(key)->second->getValue());
         st3 = st3.append(" ");
         string st5 = st3.append(st4);
-        this->infoQueue.push(st5);
+        string st6 = st5.append("\r\n");
+        this->infoQueue.push(st6);
         mutex_lock.unlock();
         return key;
     }

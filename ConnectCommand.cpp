@@ -55,12 +55,12 @@ bool ConnectCommand::isConnected() {
 
 
 void ConnectCommand::sendData(SymbolTable* symt, int client_socket) {
-    queue <string> q = symt->getQueue();
-    while (!symt->isDone()) {
-        if (!q.empty()) {
-            char toSend[q.front().size()+1];
-            strcpy(toSend, q.front().c_str());
-            q.pop();
+    queue <string>* q = symt->getQueue();
+    while (!symt->isDone() || !q->empty()) {
+        if (!q->empty()) {
+            char toSend[q->front().size()+1];
+            strcpy(toSend, q->front().c_str());
+            q->pop();
             int is_sent = send(client_socket , toSend , strlen(toSend) , 0);
             if (is_sent == -1) {
                 std::cout<<"Error sending message"<<std::endl;
