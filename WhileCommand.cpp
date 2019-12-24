@@ -10,15 +10,17 @@ int WhileCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
     Interpreter* interp = symt->getInterpreter();
     Expression* e = interp->interpret((*param)[index]);
     index++;
+    int comIndex = index;
     while (e->calculate() != 0) {
-        while ((*param)[index] != "}") {
+        comIndex = index;
+        while ((*param)[comIndex] != "}") {
             Command* c = NULL;
-            auto it = commandMap.find((*param)[index]);
+            auto it = commandMap.find((*param)[comIndex]);
             if (it != commandMap.end()) {
                 c= it->second;
-                index += c->execute(param, index+1, symt);
+                comIndex += c->execute(param, comIndex+1, symt);
             } else {
-                index++;
+                comIndex++;
             }
         }
     }

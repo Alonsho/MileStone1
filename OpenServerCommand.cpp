@@ -90,6 +90,9 @@ void OpenServerCommand::getData(SymbolTable* symt) {
         valread = read(client_socket, buffer, 1024);
         i = 0;
         while (buffer[i] != 0) {
+            if (j == 36) {
+                j = 0;
+            }
             if (buffer[i] == ',') {
                 if (value == "") {
                     i++;

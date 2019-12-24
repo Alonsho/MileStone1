@@ -82,7 +82,7 @@ void SymbolTable::addToMap(Variable* var, string st){
 
 //initializing XML array (XML file content).
 void SymbolTable::initXMLArr() {
-    xmlArr[0] = ("/instrumentation/airspeed-indicator/indicated-speed-kt");
+    xmlArr[0] = "/instrumentation/airspeed-indicator/indicated-speed-kt";
     xmlArr[1] = "/sim/time/warp";
     xmlArr[2] = "/controls/switches/magnetos";
     xmlArr[3] = "/instrumentation/heading-indicator/offset-deg";
