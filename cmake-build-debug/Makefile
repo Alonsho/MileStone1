@@ -150,6 +150,33 @@ AssignCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/AssignCommand.cpp.s
 .PHONY : AssignCommand.cpp.s
 
+ConditionParser.o: ConditionParser.cpp.o
+
+.PHONY : ConditionParser.o
+
+# target to build an object file
+ConditionParser.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/ConditionParser.cpp.o
+.PHONY : ConditionParser.cpp.o
+
+ConditionParser.i: ConditionParser.cpp.i
+
+.PHONY : ConditionParser.i
+
+# target to preprocess a source file
+ConditionParser.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/ConditionParser.cpp.i
+.PHONY : ConditionParser.cpp.i
+
+ConditionParser.s: ConditionParser.cpp.s
+
+.PHONY : ConditionParser.s
+
+# target to generate assembly for a file
+ConditionParser.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/ConditionParser.cpp.s
+.PHONY : ConditionParser.cpp.s
+
 ConnectCommand.o: ConnectCommand.cpp.o
 
 .PHONY : ConnectCommand.o
@@ -420,6 +447,33 @@ Variable.cpp.s:
 	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/Variable.cpp.s
 .PHONY : Variable.cpp.s
 
+WhileCommand.o: WhileCommand.cpp.o
+
+.PHONY : WhileCommand.o
+
+# target to build an object file
+WhileCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/WhileCommand.cpp.o
+.PHONY : WhileCommand.cpp.o
+
+WhileCommand.i: WhileCommand.cpp.i
+
+.PHONY : WhileCommand.i
+
+# target to preprocess a source file
+WhileCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/WhileCommand.cpp.i
+.PHONY : WhileCommand.cpp.i
+
+WhileCommand.s: WhileCommand.cpp.s
+
+.PHONY : WhileCommand.s
+
+# target to generate assembly for a file
+WhileCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Main.dir/build.make CMakeFiles/Main.dir/WhileCommand.cpp.s
+.PHONY : WhileCommand.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -459,6 +513,9 @@ help:
 	@echo "... AssignCommand.o"
 	@echo "... AssignCommand.i"
 	@echo "... AssignCommand.s"
+	@echo "... ConditionParser.o"
+	@echo "... ConditionParser.i"
+	@echo "... ConditionParser.s"
 	@echo "... ConnectCommand.o"
 	@echo "... ConnectCommand.i"
 	@echo "... ConnectCommand.s"
@@ -489,6 +546,9 @@ help:
 	@echo "... Variable.o"
 	@echo "... Variable.i"
 	@echo "... Variable.s"
+	@echo "... WhileCommand.o"
+	@echo "... WhileCommand.i"
+	@echo "... WhileCommand.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

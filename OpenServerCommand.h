@@ -20,6 +20,7 @@ class OpenServerCommand : public Command{
   void getData();
   bool isConnected();
 
+  void getData(SymbolTable *symt);
 };
 
 #endif //MILESTONE1__OPENSERVERCOMMAND_H_

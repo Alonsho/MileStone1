@@ -10,6 +10,15 @@ CMakeFiles/Main.dir/AssignCommand.cpp.o: ../Interpreter.h
 CMakeFiles/Main.dir/AssignCommand.cpp.o: ../SymbolTable.h
 CMakeFiles/Main.dir/AssignCommand.cpp.o: ../Variable.h
 
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Arrow.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Command.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../ConditionParser.cpp
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../ConditionParser.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Expression.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Interpreter.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../SymbolTable.h
+CMakeFiles/Main.dir/ConditionParser.cpp.o: ../Variable.h
+
 CMakeFiles/Main.dir/ConnectCommand.cpp.o: ../Arrow.h
 CMakeFiles/Main.dir/ConnectCommand.cpp.o: ../Command.h
 CMakeFiles/Main.dir/ConnectCommand.cpp.o: ../ConnectCommand.cpp
@@ -77,6 +86,16 @@ CMakeFiles/Main.dir/SymbolTable.cpp.o: ../Variable.h
 CMakeFiles/Main.dir/Variable.cpp.o: ../Arrow.h
 CMakeFiles/Main.dir/Variable.cpp.o: ../Variable.cpp
 CMakeFiles/Main.dir/Variable.cpp.o: ../Variable.h
+
+CMakeFiles/Main.dir/WhileCommand.cpp.o: ../Arrow.h
+CMakeFiles/Main.dir/WhileCommand.cpp.o: ../Command.h
+CMakeFiles/Main.dir/WhileCommand.cpp.o: ../ConditionParser.h
+CMakeFiles/Main.dir/WhileCommand.cpp.o: ../Expression.h
+CMakeFiles/Main.dir/WhileCommand.cpp.o: ../Interpreter.h
+CMakeFiles/Main.dir/WhileCommand.cpp.o: ../SymbolTable.h
+CMakeFiles/Main.dir/WhileCommand.cpp.o: ../Variable.h
+CMakeFiles/Main.dir/WhileCommand.cpp.o: ../WhileCommand.cpp
+CMakeFiles/Main.dir/WhileCommand.cpp.o: ../WhileCommand.h
 
 CMakeFiles/Main.dir/main.cpp.o: ../Arrow.h
 CMakeFiles/Main.dir/main.cpp.o: ../AssignCommand.h

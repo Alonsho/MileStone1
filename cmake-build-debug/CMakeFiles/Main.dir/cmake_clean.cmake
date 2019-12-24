@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Main.dir/AssignCommand.cpp.o"
+  "CMakeFiles/Main.dir/ConditionParser.cpp.o"
   "CMakeFiles/Main.dir/ConnectCommand.cpp.o"
   "CMakeFiles/Main.dir/DefineVarCommand.cpp.o"
   "CMakeFiles/Main.dir/Expression.cpp.o"
@@ -10,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Main.dir/SleepCommand.cpp.o"
   "CMakeFiles/Main.dir/SymbolTable.cpp.o"
   "CMakeFiles/Main.dir/Variable.cpp.o"
+  "CMakeFiles/Main.dir/WhileCommand.cpp.o"
   "CMakeFiles/Main.dir/main.cpp.o"
   "Main"
   "Main.pdb"
