@@ -7,6 +7,7 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <functional>
+#include <sstream>
 #include "OpenServerCommand.h"
 
 using namespace std;
@@ -82,30 +83,30 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
 void OpenServerCommand::getData(SymbolTable* symt) {
     char buffer[1024] = {0};
     int valread = 1;
+    string value;
+    int j = 0;
+    int i = 0;
     while (!symt->isDone()) {
-        valread = read( client_socket , buffer, 1024);
-        string s(buffer);
-        size_t pos = 0;
-        size_t commaPos = 0;
-        size_t prev = 0;
-        string token;
-        int i = 0;
-        while (pos != string::npos) {
-            pos = s.find("\n", pos);
-            commaPos = s.find(",", commaPos);
-            if (commaPos < pos) {
-                token = s.substr(prev, commaPos-prev);
-                prev = commaPos+1;
-                symt->editSimArr(i, stod(token));
-                i++;
+        valread = read(client_socket, buffer, 1024);
+        i = 0;
+        while (buffer[i] != 0) {
+            if (buffer[i] == ',') {
+                symt->editSimArr(j, stod(value));
+                j++;
+                value = "";
+            } else if (buffer[i] == '\n') {
+                if (value == "") {
+                    i++;
+                    continue;
+                }
+                symt->editSimArr(j, stod(value));
+                j = 0;
+                value = "";
             } else {
-                token = s.substr(prev, pos-prev);
-                prev = pos+1;
-                symt->editSimArr(i, stod(token));
-                i = 0;
+                value += buffer[i];
             }
+            i++;
         }
-        std::cout<<buffer<<std::endl << flush;
     }
 }
 

@@ -28,7 +28,7 @@ int main() {
 
     map<string, Command*> commandMap = initializeCommandMap();
     SymbolTable symt;
-    vector<string> commandLex = lexFile("fly_with_func.txt");
+    vector<string> commandLex = lexFile("fly.txt");
 
     OpenServerCommand server;
     int i = 0;
