@@ -64,7 +64,7 @@ void SymbolTable::editSimArr(int key, double value) {
 void SymbolTable::addToMapAndArr(Variable* var, string name, int index) {
     mutex_lock.lock();
     this->varMap.insert({name, var});
-    this->simArr[index+1] = var;
+    this->simArr[index] = var;
     var->setName(name);
     //adding it to interpreter, so that in "execute" command we'll get a double type.
     interp->setVariables((name + "=" + to_string(var->getValue())));
@@ -82,6 +82,7 @@ void SymbolTable::addToMap(Variable* var, string st){
 
 //initializing XML array (XML file content).
 void SymbolTable::initXMLArr() {
+
     xmlArr[0] = "/instrumentation/airspeed-indicator/indicated-speed-kt";
     xmlArr[1] = "/sim/time/warp";
     xmlArr[2] = "/controls/switches/magnetos";
