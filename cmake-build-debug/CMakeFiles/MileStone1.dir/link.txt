@@ -1,1 +1,0 @@
-/usr/bin/c++  -pthread -g   CMakeFiles/MileStone1.dir/client.cpp.o  -o MileStone1 

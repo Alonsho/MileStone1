@@ -6,53 +6,29 @@
 
 #IncludeRegexTransform: 
 
-/home/alon/CLionProjects/AP/MileStone1/Arrow.h
-
-/home/alon/CLionProjects/AP/MileStone1/Command.h
-vector
--
-SymbolTable.h
-/home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
-Interpreter.h
-/home/alon/CLionProjects/AP/MileStone1/Interpreter.h
-
-/home/alon/CLionProjects/AP/MileStone1/Expression.h
+/home/dorgamliel/studies/advp/MileStone1/Expression.h
 string
 -
 
-/home/alon/CLionProjects/AP/MileStone1/Interpreter.h
-Expression.h
-/home/alon/CLionProjects/AP/MileStone1/Expression.h
-map
+/home/dorgamliel/studies/advp/MileStone1/Interpreter.cpp
+Interpreter.h
+/home/dorgamliel/studies/advp/MileStone1/Interpreter.h
+cstring
+-
+regex
 -
 queue
 -
 stack
 -
 
-/home/alon/CLionProjects/AP/MileStone1/SymbolTable.cpp
-SymbolTable.h
-/home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
-SymbolTable.h
-/home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
-Command.h
-/home/alon/CLionProjects/AP/MileStone1/Command.h
-
-/home/alon/CLionProjects/AP/MileStone1/SymbolTable.h
+/home/dorgamliel/studies/advp/MileStone1/Interpreter.h
+Expression.h
+/home/dorgamliel/studies/advp/MileStone1/Expression.h
 map
 -
-Variable.h
-/home/alon/CLionProjects/AP/MileStone1/Variable.h
-mutex
+queue
 -
-vector
+stack
 -
-Interpreter.h
-/home/alon/CLionProjects/AP/MileStone1/Interpreter.h
-
-/home/alon/CLionProjects/AP/MileStone1/Variable.h
-string
--
-Arrow.h
-/home/alon/CLionProjects/AP/MileStone1/Arrow.h
 

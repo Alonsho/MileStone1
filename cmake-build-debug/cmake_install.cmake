@@ -1,4 +1,4 @@
-# Install script for directory: /home/alon/CLionProjects/AP/MileStone1
+# Install script for directory: /home/dorgamliel/studies/advp/MileStone1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

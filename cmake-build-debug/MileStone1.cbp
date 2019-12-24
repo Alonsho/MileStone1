@@ -8,28 +8,28 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option working_dir="/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option working_dir="/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Main">
-				<Option output="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option output="/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,15 +44,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Main/fast">
-				<Option output="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Main" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option output="/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Main" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,96 +67,96 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 Main/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug"/>
+				<Option working_dir="/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alon/CLionProjects/AP/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/dorgamliel/studies/advp/MileStone1/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Arrow.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/Arrow.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/AssignCommand.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/AssignCommand.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/AssignCommand.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/AssignCommand.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/ConnectCommand.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/ConnectCommand.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/ConnectCommand.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/ConnectCommand.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/DefineVarCommand.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/DefineVarCommand.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/DefineVarCommand.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/DefineVarCommand.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Expression.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/Expression.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Expression.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/Expression.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Interpreter.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/Interpreter.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Interpreter.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/Interpreter.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Lexer.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/Lexer.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Lexer.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/Lexer.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/OpenServerCommand.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/OpenServerCommand.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/OpenServerCommand.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/PrintCommand.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/PrintCommand.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/PrintCommand.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/PrintCommand.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/SleepCommand.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/SleepCommand.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/SleepCommand.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/SleepCommand.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/SymbolTable.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/SymbolTable.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/SymbolTable.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/SymbolTable.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Variable.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/Variable.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/Variable.h">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/Variable.h">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/main.cpp">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/main.cpp">
 			<Option target="Main"/>
 		</Unit>
-		<Unit filename="/home/alon/CLionProjects/AP/MileStone1/CMakeLists.txt">
+		<Unit filename="/home/dorgamliel/studies/advp/MileStone1/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

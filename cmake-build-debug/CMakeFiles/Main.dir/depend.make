@@ -79,6 +79,7 @@ CMakeFiles/Main.dir/Variable.cpp.o: ../Variable.cpp
 CMakeFiles/Main.dir/Variable.cpp.o: ../Variable.h
 
 CMakeFiles/Main.dir/main.cpp.o: ../Arrow.h
+CMakeFiles/Main.dir/main.cpp.o: ../AssignCommand.h
 CMakeFiles/Main.dir/main.cpp.o: ../Command.h
 CMakeFiles/Main.dir/main.cpp.o: ../ConnectCommand.h
 CMakeFiles/Main.dir/main.cpp.o: ../DefineVarCommand.h
