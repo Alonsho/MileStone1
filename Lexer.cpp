@@ -42,7 +42,7 @@ vector<string> splitLine(string st){
         }
         //c is the i'th char in string.
         char c = st[i];
-        if (c == '=') {
+        if (c == '=' && !quotesFlag) {
             vec.push_back("=");
             //push remaining string (in line) into stack.
             vec.push_back(separateAfterEqual(st));
@@ -51,6 +51,7 @@ vector<string> splitLine(string st){
         }
         //if current char is a part of an arrow, push arrow and further content.
         if (st.substr(i, 2) == "->" || st.substr(i, 2) == "<-") {
+            if (!quotesFlag) {
             vec.push_back(arrowDirection(st, i));
             //add sim to vector if is in line.
             if (st.find("sim") != st.npos) {
@@ -58,6 +59,7 @@ vector<string> splitLine(string st){
             }
             vec.push_back(separateAfterArrow(st));
             return vec;
+            }
         }
         //checks for an arrow or an equal sign with no space prior to it.
         if (c != ' ' && (arrowIsNext(st, i) || st.substr(i + 1, 1) == "=")) {
@@ -81,7 +83,7 @@ vector<string> splitLine(string st){
             //put content in brackets in one string
         } else if (c == '(') {
             //if current temporary string is not empty, push to stack.
-            if (tempStr != "") {
+            if (tempStr != "" && !quotesFlag) {
                 vec.push_back(tempStr);
                 tempStr = "";
             }
@@ -167,7 +169,12 @@ vector<string> conditionCheck(string st){
     }
     vec.push_back(condition);
     st = st.substr(condition.length() + 1);
-    st = st.substr(0, st.length()-2);
+    //checking for curly braces.
+    if (st.back() == '{') {
+        st = st.substr(0, st.length() - 1);
+    } else {
+        st = st.substr(0, st.length() - 2);
+    }
     st.erase(remove(st.begin(),st.end(), ' '), st.end());
     vec.push_back(st);
     vec.push_back("{");
