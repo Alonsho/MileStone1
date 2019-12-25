@@ -40,17 +40,22 @@ int DefineVarCommand::execute(vector<std::__cxx11::string>* param, int index, cl
             var->setDirection(arrow);
         }
         //Iterate through XML file and look for a match.
-        for (int j=0; j < 36 ;j++){
+        int j;
+        for (j=0; j < 36 ;j++){
             //If there is a match, add variable to map, and array (on index j).
             if (symt->getXMLArr()[j].compare(str) == 0) {
                 symt->addToMapAndArr(var, (*param)[index], j);
                 break;
             }
         }
+        if (j == 36) {
+            symt->addToMap(var, var->getName());
+        }
     } else {
         //In case a new variable is being equated to a pre-defined variable.
         Expression* e = interp->interpret((*param)[index+2]);
         var = new Variable(varName, "", arrow);
+        var->setValue(e->calculate());
         symt->addToMap(var, (*param)[index]);
         return 3;
     }

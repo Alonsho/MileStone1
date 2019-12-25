@@ -66,7 +66,6 @@ void ConnectCommand::sendData(SymbolTable* symt, int client_socket) {
                 std::cout<<"Error sending message"<<std::endl;
             }
         }
-        sleep(1);
     }
 }
 

@@ -8,6 +8,8 @@
 #include "DefineVarCommand.h"
 #include "PrintCommand.h"
 #include "SleepCommand.h"
+#include "AssignCommand.h"
+#include "WhileCommand.h"
 
 map<string, Command*> ConditionParser::initializeCommandMap() {
     map<string, Command*> commandMap;
@@ -19,8 +21,12 @@ map<string, Command*> ConditionParser::initializeCommandMap() {
     commandMap["var"] = def;
     auto* pr = new PrintCommand();
     commandMap["Print"] = pr;
-    auto* sl = new SleepCommand;
+    auto* sl = new SleepCommand();
     commandMap["Sleep"] = sl;
+    AssignCommand* as = new AssignCommand();
+    commandMap["="] = as;
+    auto* wh = new WhileCommand();
+    commandMap["while"] = wh;
 
     // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
     return commandMap;

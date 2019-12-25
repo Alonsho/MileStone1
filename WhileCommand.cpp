@@ -9,10 +9,9 @@ int WhileCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
     map<string, Command*> commandMap = initializeCommandMap();
     Interpreter* interp = symt->getInterpreter();
     Expression* e = interp->interpret((*param)[index]);
-    index++;
-    int comIndex = index;
+    int comIndex;
     while (e->calculate() != 0) {
-        comIndex = index;
+        comIndex = index + 1;
         while ((*param)[comIndex] != "}") {
             Command* c = NULL;
             auto it = commandMap.find((*param)[comIndex]);
@@ -23,6 +22,7 @@ int WhileCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
                 comIndex++;
             }
         }
+        e = interp->interpret((*param)[index]);
     }
     return 2;
 }
