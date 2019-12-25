@@ -81,6 +81,12 @@ double Div::calculate() {
 }
 
 
+
+
+
+
+
+
 Greater::Greater(Expression * e1, Expression * e2) {
     this->left = e1;
     this->right = e2;

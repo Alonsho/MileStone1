@@ -9,15 +9,11 @@
 #include <vector>
 
 class ConnectCommand: public Command {
-  bool connected;
 
  public:
   ConnectCommand() {
-      connected = false;
   }
   int execute(vector<string>* param, int index, SymbolTable* symt);
-  bool isConnected();
-  void sendData(SymbolTable *symt);
   void sendData(SymbolTable *symt, int client_socket);
 };
 

@@ -8,12 +8,13 @@
 #include <unistd.h>
 #include <functional>
 #include <sstream>
+#include <thread>
 #include "OpenServerCommand.h"
+#include "ConditionParser.h"
 
 using namespace std;
 
 OpenServerCommand::OpenServerCommand() {
-    connected = false;
 
 }
 
@@ -71,9 +72,8 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
     char buffer[1024] = {0};
     int valread = 1;
     valread = read( client_socket , buffer, 1024);
-    connected = true;
     std::cout<<buffer<<std::endl << flush;
-    getData(symt);
+    thread(&OpenServerCommand::getData, this, symt).detach();
 
 
 
@@ -94,7 +94,7 @@ void OpenServerCommand::getData(SymbolTable* symt) {
                 j = 0;
             }
             if (buffer[i] == ',') {
-                if (value == "") {
+                if (value.empty()) {
                     i++;
                     continue;
                 }
@@ -102,7 +102,7 @@ void OpenServerCommand::getData(SymbolTable* symt) {
                 j++;
                 value = "";
             } else if (buffer[i] == '\n') {
-                if (value == "") {
+                if (value.empty()) {
                     j = 0;
                     i++;
                     continue;
@@ -116,8 +116,4 @@ void OpenServerCommand::getData(SymbolTable* symt) {
             i++;
         }
     }
-}
-
-bool OpenServerCommand::isConnected() {
-    return connected;
 }

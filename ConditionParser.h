@@ -10,7 +10,7 @@ class ConditionParser : public Command {
  public:
   ConditionParser() {};
   virtual int execute(vector<string>* param, int index, SymbolTable* symt) = 0;
-  map<string, Command*> initializeCommandMap();
+  static map<string, Command*> initializeCommandMap();
 };
 
 #endif //MILESTONE1__CONDITIONPARSER_H_

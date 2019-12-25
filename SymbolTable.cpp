@@ -12,6 +12,7 @@ SymbolTable::SymbolTable() {
     initXMLArr();
     initSimArr();
     interp = new Interpreter();
+    done = false;
 }
 
 map<string, Variable*>* SymbolTable::getVarMap() {
