@@ -2,22 +2,22 @@
 #include <list>
 #include <vector>
 #include <unistd.h>
-#include <thread>
 #include "Command.h"
 #include "OpenServerCommand.h"
 #include "ConnectCommand.h"
 #include "Lexer.h"
 #include "SymbolTable.h"
 #include "Interpreter.h"
+#include "DefineVarCommand.h"
+#include "PrintCommand.h"
+#include "SleepCommand.h"
+#include "AssignCommand.h"
 #include "WhileCommand.h"
-<<<<<<< HEAD
 #include "IfCommand.h"
 
 void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, SymbolTable* symt);
 void startClient(vector<string>* commandLex, int i, ConnectCommand* client, SymbolTable* symt);
 map<string, Command*> initializeCommandMap();
-=======
->>>>>>> 5653770e076a077ea65eedd670f03583b37ef333
 void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt);
 
 using namespace std;
@@ -31,7 +31,6 @@ int main() {
     return 0;
 }
 
-<<<<<<< HEAD
 void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, SymbolTable* symt) {
     server->execute(commandLex, i+1, symt);
 }
@@ -65,8 +64,6 @@ map<string, Command*> initializeCommandMap() {
 
 }
 
-=======
->>>>>>> 5653770e076a077ea65eedd670f03583b37ef333
 
 //parsing each line of text file. MISSING - editing variables (from lex index 116).
 void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt) {
