@@ -10,6 +10,7 @@
 #include "SleepCommand.h"
 #include "AssignCommand.h"
 #include "WhileCommand.h"
+#include "IfCommand.h"
 
 map<string, Command*> ConditionParser::initializeCommandMap() {
     map<string, Command*> commandMap;
@@ -27,6 +28,8 @@ map<string, Command*> ConditionParser::initializeCommandMap() {
     commandMap["="] = as;
     auto* wh = new WhileCommand();
     commandMap["while"] = wh;
+    auto* _if = new IfCommand();
+    commandMap["if"] = _if;
 
     // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
     return commandMap;

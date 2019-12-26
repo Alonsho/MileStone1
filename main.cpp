@@ -14,6 +14,7 @@
 #include "Interpreter.h"
 #include "AssignCommand.h"
 #include "WhileCommand.h"
+#include "IfCommand.h"
 
 void startServer(vector<string>* commandLex, int i, OpenServerCommand* server, SymbolTable* symt);
 void startClient(vector<string>* commandLex, int i, ConnectCommand* client, SymbolTable* symt);
@@ -89,6 +90,8 @@ map<string, Command*> initializeCommandMap() {
     commandMap["="] = as;
     auto* wh = new WhileCommand();
     commandMap["while"] = wh;
+    auto* _if = new IfCommand();
+    commandMap["if"] = _if;
 
     // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
     return commandMap;
