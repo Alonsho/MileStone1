@@ -11,6 +11,7 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <cstring>
+#include <thread>
 #include "Interpreter.h"
 
 int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt) {
@@ -43,14 +44,9 @@ int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt)
         return -2;
     } else {
         std::cout<<"Client is now connected to server" <<std::endl;
-        connected = true;
     }
-    sendData(symt, client_socket);
+    thread(&ConnectCommand::sendData, this, symt, client_socket).detach();
     return 3;
-}
-
-bool ConnectCommand::isConnected() {
-    return connected;
 }
 
 

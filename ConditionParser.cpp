@@ -24,7 +24,7 @@ map<string, Command*> ConditionParser::initializeCommandMap() {
     commandMap["Print"] = pr;
     auto* sl = new SleepCommand();
     commandMap["Sleep"] = sl;
-    AssignCommand* as = new AssignCommand();
+    auto* as = new AssignCommand();
     commandMap["="] = as;
     auto* wh = new WhileCommand();
     commandMap["while"] = wh;
