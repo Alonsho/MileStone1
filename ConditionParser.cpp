@@ -34,3 +34,11 @@ map<string, Command*> ConditionParser::initializeCommandMap() {
     // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
     return commandMap;
 }
+
+void ConditionParser::cleanMap(map<string, Command*> commandMap) {
+    auto it = commandMap.begin();
+    while (it != commandMap.end()){
+        delete it->second;
+        it++;
+    }
+}

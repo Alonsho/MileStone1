@@ -3,11 +3,12 @@
 // Created by alon on 16/12/2019.
 //
 
-#include "SymbolTable.h"
-#include "Command.h"
 #include <queue>
+#include <array>
 std::mutex mutex_lock;
 
+//Constructor. Initialize XML array, Simulator-Variable array and
+//an interpreter for Variable objects expressions.
 SymbolTable::SymbolTable() {
     initXMLArr();
     initSimArr();
@@ -15,10 +16,12 @@ SymbolTable::SymbolTable() {
     done = false;
 }
 
+//returns a map of all variables in text file and their related Value objects.
 map<string, Variable*>* SymbolTable::getVarMap() {
     return &varMap;
 }
 
+//
 array<Variable*, 36> SymbolTable::getSimMap() {
     return simArr;
 }
@@ -67,12 +70,12 @@ void SymbolTable::addToMapAndArr(Variable* var, string name, int index) {
     this->varMap.insert({name, var});
     this->simArr[index] = var;
     var->setName(name);
-    //adding it to interpreter, so that in "execute" command we'll get a double type.
+    //adding it to interpreter, so that in "execute" command we'll get a value.
     interp->setVariables((name + "=" + to_string(var->getValue())));
     mutex_lock.unlock();
 }
 
-//this function adds a new variable only to a map (if variable is dependant on another variable).
+//this function adds a new variable only to a map (if variable depends on existing variable).
 void SymbolTable::addToMap(Variable* var, string st){
     mutex_lock.lock();
     this->varMap.insert({st, var});
@@ -134,7 +137,23 @@ void SymbolTable::initSimArr() {
     }
 }
 
-
+//returns interpreter.
 Interpreter* SymbolTable::getInterpreter() {
     return interp;
+}
+
+//Destructor.
+SymbolTable::~SymbolTable(){
+    delete this->interp;
+    auto it = this->varMap.begin();
+    for (int i=0; i< this->simArr.size(); i++){
+        delete this->simArr[i];
+        this->simArr[i] = NULL;
+    }
+    while (it!=this->varMap.end()){
+        if (it->second != NULL) {
+            delete it->second;
+        }
+        it++;
+    }
 }

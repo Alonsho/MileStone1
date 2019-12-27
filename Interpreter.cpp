@@ -12,7 +12,6 @@ using namespace std;
 
 
 Interpreter::~Interpreter() {
-
 }
 
 
@@ -48,7 +47,6 @@ void Interpreter::setVariables(string str) {
     }
     return;
 }
-
 
 Expression* Interpreter::interpret(string str) {
     queue<string> operands;
@@ -129,7 +127,6 @@ Expression* Interpreter::interpret(string str) {
 
 }
 
-
 bool Interpreter::stringIsOperator(string token) {
     if (token[0] == '+' || token[0] == '-' || token[0] == '*' || token[0] == '/' || token[0] == '(' || token[0] == ')'
         || token[0] == '<' || token[0] == '>' || token == "<=" || token == ">=" || token == "==" || token == "!=") {
@@ -191,14 +188,12 @@ void Interpreter::insertOperator(string token, queue<string>* operands, stack<st
     }
 }
 
-
 void Interpreter::emptyOperatorStack(queue<string>* operands, stack<string>* operators) {
     while (!operators->empty()) {
         operands->push(operators->top());
         operators->pop();
     }
 }
-
 
 Expression* Interpreter::convertToExpression(queue<string>* operands) {
     stack<Expression*> expressions;

@@ -11,6 +11,7 @@ class ConditionParser : public Command {
   ConditionParser() {};
   virtual int execute(vector<string>* param, int index, SymbolTable* symt) = 0;
   static map<string, Command*> initializeCommandMap();
+  static void cleanMap(map<string, Command*>);
 };
 
 #endif //MILESTONE1__CONDITIONPARSER_H_

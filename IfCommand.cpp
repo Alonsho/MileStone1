@@ -32,5 +32,6 @@ int IfCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
             comIndex++;
         }
     }
+    ConditionParser::cleanMap(commandMap);
     return (comIndex-index+1);
 }

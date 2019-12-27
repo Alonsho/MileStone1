@@ -1,7 +1,7 @@
 //
 // Created by dorgamliel on 21/12/2019.
 //
-
+#define XML_SIZE 36
 #include <iostream>
 #include "DefineVarCommand.h"
 
@@ -31,7 +31,7 @@ int DefineVarCommand::execute(vector<std::__cxx11::string>* param, int index, cl
 
         //check if Variable already exists.
         int ptr = findIdenticalVar(str, symt);
-        //does not exist in simulator array.
+        //if does not exist in simulator array,
         if ( ptr == -1){
             var = new Variable(varName, str ,arrow);
             //exists in simulator array.
@@ -41,13 +41,14 @@ int DefineVarCommand::execute(vector<std::__cxx11::string>* param, int index, cl
         }
         //Iterate through XML file and look for a match.
         int j;
-        for (j=0; j < 36 ;j++){
+        for (j=0; j < XML_SIZE ;j++){
             //If there is a match, add variable to map, and array (on index j).
             if (symt->getXMLArr()[j].compare(str) == 0) {
                 symt->addToMapAndArr(var, (*param)[index], j);
                 break;
             }
         }
+        //if variable wasn't found in XML file, add to map only (it will depend on existing expression).
         if (j == 36) {
             symt->addToMap(var, var->getName());
         }

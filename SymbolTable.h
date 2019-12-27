@@ -34,8 +34,7 @@ public:
     bool isDone(){return done; };
     void setDone(){ this->done = true;}
     queue<string>* getQueue(){ return &this->infoQueue; }
-
-
+    ~SymbolTable();
 };
 
 #endif //MILESTONE1__SYMBOLTABLE_H_
