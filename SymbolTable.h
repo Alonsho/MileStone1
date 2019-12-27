@@ -34,6 +34,8 @@ public:
     bool isDone(){return done; };
     void setDone(){ this->done = true;}
     queue<string>* getQueue(){ return &this->infoQueue; }
+    bool IsInArray(Variable*);
+    vector<Variable*> transferToVector();
     ~SymbolTable();
 };
 

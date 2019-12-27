@@ -33,5 +33,6 @@ int IfCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
         }
     }
     ConditionParser::cleanMap(commandMap);
+    delete e;
     return (comIndex-index+1);
 }

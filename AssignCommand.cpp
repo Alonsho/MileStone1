@@ -18,5 +18,6 @@ int AssignCommand::execute(vector<string> * param, int index, class SymbolTable 
     } catch (exception e){
         cerr << "variable not found" << endl;
     }
+    delete e;
     return 2;
 }

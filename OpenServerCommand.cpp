@@ -30,6 +30,7 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
     if (socketfd == -1) {
         //error
         std::cerr << "Could not create a socket"<<std::endl;
+        delete e;
         return -1;
     }
 
@@ -74,9 +75,7 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
     valread = read( client_socket , buffer, 1024);
     std::cout<<buffer<<std::endl << flush;
     thread(&OpenServerCommand::getData, this, symt).detach();
-
-
-
+    delete e;
     return 2;
 }
 

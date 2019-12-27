@@ -11,5 +11,6 @@ int SleepCommand::execute(vector<string> * param, int index, class SymbolTable *
     Expression* e = interp->interpret((*param)[index]);
     int time = e->calculate();
     std::this_thread::sleep_for(std::chrono::milliseconds(time));
+    delete e;
     return 2;
 }

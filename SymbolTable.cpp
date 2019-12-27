@@ -5,6 +5,7 @@
 
 #include <queue>
 #include <array>
+
 std::mutex mutex_lock;
 
 //Constructor. Initialize XML array, Simulator-Variable array and
@@ -145,15 +146,37 @@ Interpreter* SymbolTable::getInterpreter() {
 //Destructor.
 SymbolTable::~SymbolTable(){
     delete this->interp;
-    auto it = this->varMap.begin();
-    for (int i=0; i< this->simArr.size(); i++){
-        delete this->simArr[i];
-        this->simArr[i] = NULL;
+   vector<Variable*> vec = transferToVector();
+    for (int i=0; i < vec.size(); i++) {
+        delete vec[i];
     }
+}
+
+vector<Variable*> SymbolTable::transferToVector() {
+    vector<Variable*> vec;
+    auto it = this->varMap.begin();
+    //iterating array.
+    for (int i=0; i< this->simArr.size(); i++){
+        vec.push_back( this->simArr[i]);
+    }
+    //iterating map.
     while (it!=this->varMap.end()){
-        if (it->second != NULL) {
-            delete it->second;
+        string s = it->second->getName();
+        //check if variable (pointer by iterator) was deleted or not.
+        if (!IsInArray(it->second)) {
+            vec.push_back(it->second);
         }
         it++;
     }
+    return vec;
+}
+
+
+bool SymbolTable::IsInArray(Variable* var){
+    for (int i=0; i < this->simArr.size(); i++){
+        if (this->simArr[i]->getName() == var->getName()){
+            return true;
+        }
+    }
+    return false;
 }

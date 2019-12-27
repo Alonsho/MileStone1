@@ -13,6 +13,7 @@ int PrintCommand::execute(vector<string>* param, int index, class SymbolTable * 
     } else {
         Expression* e = interp->interpret((*param)[index]);
         cout << e->calculate() << endl;
+        delete e;
     }
     return 2;
 }

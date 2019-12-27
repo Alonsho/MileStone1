@@ -28,7 +28,6 @@ int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt)
     strcpy(ip, (*param)[0].c_str());
     index++;
     Expression* e = interp->interpret((*param)[index]);
-
     //We need to create a sockaddr obj to hold address of server
     sockaddr_in address; //in means IP4
     address.sin_family = AF_INET;//IP4
@@ -41,11 +40,13 @@ int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt)
     int is_connect = connect(client_socket, (struct sockaddr *)&address, sizeof(address));
     if (is_connect == -1) {
         std::cerr << "Could not connect to host server"<<std::endl;
+        delete e;
         return -2;
     } else {
         std::cout<<"Client is now connected to server" <<std::endl;
     }
     thread(&ConnectCommand::sendData, this, symt, client_socket).detach();
+    delete e;
     return 3;
 }
 

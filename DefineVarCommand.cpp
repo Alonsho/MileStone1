@@ -58,6 +58,7 @@ int DefineVarCommand::execute(vector<std::__cxx11::string>* param, int index, cl
         var = new Variable(varName, "", arrow);
         var->setValue(e->calculate());
         symt->addToMap(var, (*param)[index]);
+        delete e;
         return 3;
     }
     return 5;

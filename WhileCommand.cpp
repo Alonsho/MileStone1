@@ -39,7 +39,7 @@ int WhileCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
         }
     }
     ConditionParser::cleanMap(commandMap);
-
+    delete e;
     //index of closing bracket - index of while condition + 1.
     return (comIndex-index+1);
 }
