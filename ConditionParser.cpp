@@ -12,6 +12,8 @@
 #include "WhileCommand.h"
 #include "IfCommand.h"
 
+
+// creates a map of commands that are to be called by their given name
 map<string, Command*> ConditionParser::initializeCommandMap() {
     map<string, Command*> commandMap;
     auto* server = new OpenServerCommand();
@@ -30,11 +32,11 @@ map<string, Command*> ConditionParser::initializeCommandMap() {
     commandMap["while"] = wh;
     auto* _if = new IfCommand();
     commandMap["if"] = _if;
-
-    // SHOULD ADD WHILE AND IF COMMANDS AND FUNC COMMANDS
     return commandMap;
 }
 
+
+// cleans memory
 void ConditionParser::cleanMap(map<string, Command*> commandMap) {
     auto it = commandMap.begin();
     while (it != commandMap.end()){

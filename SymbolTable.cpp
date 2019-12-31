@@ -171,7 +171,7 @@ vector<Variable*> SymbolTable::transferToVector() {
     return vec;
 }
 
-
+// check if a given variable is in the simulators map (values sent in by the simulator)
 bool SymbolTable::IsInArray(Variable* var){
     for (unsigned int i=0; i < this->simArr.size(); i++){
         if (this->simArr[i]->getName() == var->getName()){

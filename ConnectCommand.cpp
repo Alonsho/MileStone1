@@ -3,17 +3,17 @@
 //
 
 #include "ConnectCommand.h"
-#include "DefineVarCommand.h"
 #include <sys/socket.h>
 #include <string>
 #include <iostream>
-#include <unistd.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
 #include <cstring>
 #include <thread>
 #include "Interpreter.h"
 
+
+// connects to the simulator and sends data if needed
 int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt) {
     Interpreter* interp = symt->getInterpreter();
     //create socket
@@ -45,19 +45,25 @@ int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt)
     } else {
         std::cout<<"Client is now connected to server" <<std::endl;
     }
+    //run an independent thread that continuously sends data to simulator
     thread(&ConnectCommand::sendData, this, symt, client_socket).detach();
     delete e;
     return 3;
 }
 
 
+// sending data to simulator
 void ConnectCommand::sendData(SymbolTable* symt, int client_socket) {
+    // the queue contains data that is to be sent to simulator
     queue <string>* q = symt->getQueue();
+    // run as long as the script is not finished or there is data to be sent
     while (!symt->isDone() || !q->empty()) {
         if (!q->empty()) {
+            // prepare the data that is to be sent
             char* toSend = new char[q->front().size()+1];
             strcpy(toSend, q->front().c_str());
             q->pop();
+            // send data to simulator
             int is_sent = send(client_socket , toSend , strlen(toSend) , 0);
             if (is_sent == -1) {
                 std::cout<<"Error sending message"<<std::endl;

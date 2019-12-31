@@ -5,6 +5,8 @@
 #include <iostream>
 #include "PrintCommand.h"
 
+
+// prints the given argument whether it is an expression or a string
 int PrintCommand::execute(vector<string>* param, int index, class SymbolTable * symt) {
     Interpreter* interp = symt->getInterpreter();
     if ((*param)[index][0] == '"') {

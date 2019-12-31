@@ -20,9 +20,6 @@ OpenServerCommand::OpenServerCommand() {
 
 int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* symt) {
     Interpreter* interp = symt->getInterpreter();
-
-
-
     Expression* e = interp->interpret((*param)[index]);
     //create socket
     int socketfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -42,7 +39,6 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
     int addrlen = sizeof(address);
     //we need to convert our number
     // to a number that the network understands.
-
     //the actual bind command
     if (bind(socketfd, (struct sockaddr *) &address, sizeof(address)) < 0) {
         std::cerr<<"Could not bind the socket to an IP"<<std::endl;
@@ -68,16 +64,20 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
 
     }
 
-    close(socketfd); //closing the listening socket
+    //closing the listening socket
+    close(socketfd);
+    // receive first line of data, it will not be used for any purpose
     char buffer[1024] = {0};
-    int valread = 1;
-    valread = read( client_socket , buffer, 1024);
-    std::cout<<buffer<<std::endl << flush;
+    read( client_socket , buffer, 1024);
+    // once the first line arrives, continue the script and create an independent thread which
+    // continuously receives data from the simulator
     thread(&OpenServerCommand::getData, this, symt).detach();
     delete e;
     return 2;
 }
 
+
+// receives data from the simulator and assigns the values to the matching variables if needed
 void OpenServerCommand::getData(SymbolTable* symt) {
     char buffer[1024] = {0};
     int valread = 1;
@@ -85,27 +85,22 @@ void OpenServerCommand::getData(SymbolTable* symt) {
     string dataLine;
     std::vector<std::string> values;
     std::string singleValue;
-    std::istringstream tokenStream;
+    std::istringstream valueStream;
+    // continues as long as the script is running
     while (!symt->isDone()) {
-        valread = read(client_socket, buffer, 1024);
-
-
-
-
-
-
-
-
-
+        read(client_socket, buffer, 1024);
         dataLine = getLastLine(buffer);
+        // checks if a bad message syntax was sent by simulator
         if (dataLine.empty()) {
             continue;
         }
-        tokenStream = istringstream(dataLine);
-        while (std::getline(tokenStream, singleValue, ','))
+        valueStream = istringstream(dataLine);
+        // divide line by commas
+        while (std::getline(valueStream, singleValue, ','))
         {
             values.push_back(singleValue);
         }
+        // assign each value to the matching variable
         for (int i = 0; i < values.size(); i++) {
             symt->editSimArr(i, stod(values[i]));
         }
@@ -114,21 +109,26 @@ void OpenServerCommand::getData(SymbolTable* symt) {
 }
 
 
+// gets the latest VALID line of data sent by the simulator
 string OpenServerCommand::getLastLine(char* buffer) {
-    regex name("((-?)[0-9]+\\.([0-9]{6},)){35}(-?)[0-9]+\\.([0-9]){6}");
+    // valid syntax of a full line of data
+    regex lineSyntax("((-?)[0-9]+\\.([0-9]{6},)){35}(-?)[0-9]+\\.([0-9]){6}");
     std::vector<std::string> dataLines;
     std::string singleLine;
     std::istringstream tokenStream(buffer);
+    // split the string by data lines
     while (std::getline(tokenStream, singleLine, '\n'))
     {
         dataLines.push_back(singleLine);
     }
+    // check which is the LATEST valid line and return it
     int i = dataLines.size();
     i--;
     for (i; i >= 0; i--) {
-        if (regex_match(dataLines[i], name)) {
+        if (regex_match(dataLines[i], lineSyntax)) {
             return dataLines[i];
         }
     }
+    // if no valid lines are found, return empty string
     return "";
 }

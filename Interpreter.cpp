@@ -14,14 +14,17 @@ using namespace std;
 Interpreter::~Interpreter() {
 }
 
-
+// add variables that are to be recognized by the interpreter
 void Interpreter::setVariables(string str) {
     char* input = &str[0];
     char* tok = strtok(input, "=");
     char* varName;
     char* varValue;
+    // syntax of variable name
     regex name("([A-z]|_)([0-9]|[A-z]|_)*");
+    // syntax of value
     regex value("(([-\\+]?)[0-9]+(\\.([0-9]+)))|(([-\\+]?)[0-9]+)");
+    // tok will switch between name of the variable and the value
     while (tok != NULL) {
         varName = tok;
         tok = strtok(NULL, ";");
@@ -48,13 +51,18 @@ void Interpreter::setVariables(string str) {
     return;
 }
 
+
+// create an expression out of a string (if it is indeed a mathematical expression) using shunting yard algo.
+// "-u" = unary minus and "+u" = unary plus
 Expression* Interpreter::interpret(string str) {
     queue<string> operands;
     stack<string> operators;
     size_t prev = 0;
     size_t pos = 1;
     string token;
+    // remove spaces
     str.erase(remove(str.begin(), str.end(), ' '), str.end());
+    // checks if first character is an operator
     token = str.substr(0, 1);
     if (stringIsOperator(token)) {
         if (token == "-" && !isdigit(str.substr(1, 1)[0])) {
@@ -76,14 +84,18 @@ Expression* Interpreter::interpret(string str) {
     } else if (token == "(") {
         operators.push(token);
         prev++;
+    // first character is part of a number, add the number as an operand
     } else {
         pos = str.find_first_of("/*+-()<>=!", 0);
         token = str.substr(prev, pos - prev);
         prev = pos;
         operands.push(token);
     }
+    // find the location of the next operator
     pos = str.find_first_of("/*+()-<>=!", prev);
+    // run on all the string
     while (pos != string::npos) {
+        // advance prev to next part
         if (pos == prev) {
             token = str.substr(prev, 2);
             if (token == "<=" || token == ">=" || token == "==" || token == "!=") {
@@ -96,6 +108,7 @@ Expression* Interpreter::interpret(string str) {
             token = str.substr(prev, pos - prev);
             prev = pos;
         }
+        // check if current token is operator and insert the correct operator to operator stack
         if (stringIsOperator(token)) {
             if (token[0] == '-' && str.substr(prev, 1) == "(" && str.substr(prev - 2, 1) == "(") {
                 insertOperator("-u", &operands, &operators);
@@ -114,19 +127,23 @@ Expression* Interpreter::interpret(string str) {
             } else {
                 insertOperator(token, &operands, &operators);
             }
+            // token is an operand
         }  else {
             operands.push(token);
         }
+        // advance pos
         pos = str.find_first_of("/*+()-<>=!", prev);
         if (pos == string::npos && prev != str.length()) {
             pos = str.length();
         }
     }
+    // moves operators to operand queue
     emptyOperatorStack(&operands, &operators);
     return convertToExpression(&operands);
 
 }
 
+// checks if a given string is an operator
 bool Interpreter::stringIsOperator(string token) {
     if (token[0] == '+' || token[0] == '-' || token[0] == '*' || token[0] == '/' || token[0] == '(' || token[0] == ')'
         || token[0] == '<' || token[0] == '>' || token == "<=" || token == ">=" || token == "==" || token == "!=") {
@@ -136,6 +153,8 @@ bool Interpreter::stringIsOperator(string token) {
     }
 }
 
+
+// inserts a operator to the stack while moving those who have higher precedence to operands queue
 void Interpreter::insertOperator(string token, queue<string>* operands, stack<string>* operators) {
     if (!operators->empty() && (token == "<" || token == ">" || token == "<=" || token == ">="||
         token == "==" || token == "!=")) {
@@ -188,6 +207,8 @@ void Interpreter::insertOperator(string token, queue<string>* operands, stack<st
     }
 }
 
+
+// moves all the operator stack into the operand queue
 void Interpreter::emptyOperatorStack(queue<string>* operands, stack<string>* operators) {
     while (!operators->empty()) {
         operands->push(operators->top());
@@ -195,9 +216,13 @@ void Interpreter::emptyOperatorStack(queue<string>* operands, stack<string>* ope
     }
 }
 
+
+// creates and Expression out of the operand queue (which now includes also the operators)
 Expression* Interpreter::convertToExpression(queue<string>* operands) {
     stack<Expression*> expressions;
     Expression* e;
+    // pops out one argument at a time, creates an expression from it (and from operands)
+    // and pushes into Expression stack
     while (!operands->empty()) {
         if (operands->front() == "*") {
             if (expressions.size() < 2) {

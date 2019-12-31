@@ -2,12 +2,15 @@
 // Created by alon on 22/12/2019.
 //
 
-#include <iostream>
-#include <map>
 #include "Expression.h"
 
 using namespace std;
 
+
+
+/*
+ * all these classes are Expression types that are to be used with the interpreter
+ */
 Value::Value(double x) {
     this->val = x;
 }

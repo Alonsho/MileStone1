@@ -2,10 +2,11 @@
 // Created by alon on 21/12/2019.
 //
 
-#include <unistd.h>
 #include "SleepCommand.h"
 #include <thread>
 
+
+// puts the thread to sleep for the given time
 int SleepCommand::execute(vector<string> * param, int index, class SymbolTable * symt) {
     Interpreter* interp = symt->getInterpreter();
     Expression* e = interp->interpret((*param)[index]);
