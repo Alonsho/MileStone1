@@ -147,7 +147,7 @@ Interpreter* SymbolTable::getInterpreter() {
 SymbolTable::~SymbolTable(){
     delete this->interp;
    vector<Variable*> vec = transferToVector();
-    for (int i=0; i < vec.size(); i++) {
+    for (unsigned int i=0; i < vec.size(); i++) {
         delete vec[i];
     }
 }
@@ -156,7 +156,7 @@ vector<Variable*> SymbolTable::transferToVector() {
     vector<Variable*> vec;
     auto it = this->varMap.begin();
     //iterating array.
-    for (int i=0; i< this->simArr.size(); i++){
+    for (unsigned int i=0; i< this->simArr.size(); i++){
         vec.push_back( this->simArr[i]);
     }
     //iterating map.
@@ -173,7 +173,7 @@ vector<Variable*> SymbolTable::transferToVector() {
 
 
 bool SymbolTable::IsInArray(Variable* var){
-    for (int i=0; i < this->simArr.size(); i++){
+    for (unsigned int i=0; i < this->simArr.size(); i++){
         if (this->simArr[i]->getName() == var->getName()){
             return true;
         }

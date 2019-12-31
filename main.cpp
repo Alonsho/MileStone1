@@ -25,7 +25,7 @@ int main() {
 
 //parsing each line of text file. MISSING - editing variables (from lex index 116).
 void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt) {
-    int index = 0;
+    unsigned int index = 0;
     while (index < lexer->size()) {
         Command* c = NULL;
         auto it = commandMap->find((*lexer)[index]);
