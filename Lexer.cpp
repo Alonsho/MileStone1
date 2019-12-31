@@ -36,7 +36,7 @@ vector<string> splitLine(string st){
         return conditionCheck(st);
     }
     //iterate through all chars in string (line in text file).
-    for(int i=0;i<st.length();i++) {
+    for(unsigned int i=0;i<st.length();i++) {
         if (st == "") {
             continue;
         }
@@ -132,7 +132,7 @@ string separateAfterArrow(string st) {
     //prevents "sim" being removed more than once in a line.
     bool simFlag = false;
     string newSt;
-    for (int i = 1; i <st.length() - 1;i++) {
+    for (unsigned int i = 1; i <st.length() - 1;i++) {
         if (st.substr(i,3) == "sim" && (!simFlag)) {
             i += 4;
             simFlag = true;

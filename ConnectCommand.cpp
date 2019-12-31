@@ -24,7 +24,7 @@ int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt)
         return -1;
     }
     string str = (*param)[index].substr(1, (*param)[index].size() - 2);
-    char ip[str.size() + 1];
+    char* ip = new char[str.size() + 1];
     strcpy(ip, (*param)[0].c_str());
     index++;
     Expression* e = interp->interpret((*param)[index]);
@@ -55,13 +55,14 @@ void ConnectCommand::sendData(SymbolTable* symt, int client_socket) {
     queue <string>* q = symt->getQueue();
     while (!symt->isDone() || !q->empty()) {
         if (!q->empty()) {
-            char toSend[q->front().size()+1];
+            char* toSend = new char[q->front().size()+1];
             strcpy(toSend, q->front().c_str());
             q->pop();
             int is_sent = send(client_socket , toSend , strlen(toSend) , 0);
             if (is_sent == -1) {
                 std::cout<<"Error sending message"<<std::endl;
             }
+            delete[] toSend;
         }
     }
 }

@@ -9,7 +9,6 @@
 //Under the assumption only lines which begin with "var" will run here.
 int DefineVarCommand::execute(vector<std::__cxx11::string>* param, int index, class SymbolTable * symt) {
     Interpreter* interp = symt->getInterpreter();
-    map<string, Variable*>* varMap = symt->getVarMap();
     string varName = (*param)[index];
     Variable* var;
     Arrow arrow;
