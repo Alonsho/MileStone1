@@ -7,10 +7,9 @@
 #include <netinet/in.h>
 #include <unistd.h>
 #include <functional>
-#include <sstream>
 #include <thread>
+#include <regex>
 #include "OpenServerCommand.h"
-#include "ConditionParser.h"
 
 using namespace std;
 
@@ -83,36 +82,53 @@ void OpenServerCommand::getData(SymbolTable* symt) {
     char buffer[1024] = {0};
     int valread = 1;
     string value;
-    int j = 0;
-    int i = 0;
+    string dataLine;
+    std::vector<std::string> values;
+    std::string singleValue;
+    std::istringstream tokenStream;
     while (!symt->isDone()) {
         valread = read(client_socket, buffer, 1024);
-        i = 0;
-        while (buffer[i] != 0) {
-            if (j == 36) {
-                j = 0;
-            }
-            if (buffer[i] == ',') {
-                if (value.empty()) {
-                    i++;
-                    continue;
-                }
-                symt->editSimArr(j, stod(value));
-                j++;
-                value = "";
-            } else if (buffer[i] == '\n') {
-                if (value.empty()) {
-                    j = 0;
-                    i++;
-                    continue;
-                }
-                symt->editSimArr(j, stod(value));
-                j = 0;
-                value = "";
-            } else {
-                value += buffer[i];
-            }
-            i++;
+
+
+
+
+
+
+
+
+
+        dataLine = getLastLine(buffer);
+        if (dataLine.empty()) {
+            continue;
+        }
+        tokenStream = istringstream(dataLine);
+        while (std::getline(tokenStream, singleValue, ','))
+        {
+            values.push_back(singleValue);
+        }
+        for (int i = 0; i < values.size(); i++) {
+            symt->editSimArr(i, stod(values[i]));
+        }
+        values.clear();
+    }
+}
+
+
+string OpenServerCommand::getLastLine(char* buffer) {
+    regex name("((-?)[0-9]+\\.([0-9]{6},)){35}(-?)[0-9]+\\.([0-9]){6}");
+    std::vector<std::string> dataLines;
+    std::string singleLine;
+    std::istringstream tokenStream(buffer);
+    while (std::getline(tokenStream, singleLine, '\n'))
+    {
+        dataLines.push_back(singleLine);
+    }
+    int i = dataLines.size();
+    i--;
+    for (i; i >= 0; i--) {
+        if (regex_match(dataLines[i], name)) {
+            return dataLines[i];
         }
     }
+    return "";
 }

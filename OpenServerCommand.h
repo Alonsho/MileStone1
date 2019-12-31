@@ -17,6 +17,7 @@ class OpenServerCommand : public Command{
   OpenServerCommand();
   int execute(vector<string>* param, int index, SymbolTable* symt);
   void getData(SymbolTable *symt);
+  string getLastLine(char*);
 };
 
 #endif //MILESTONE1__OPENSERVERCOMMAND_H_
