@@ -11,4 +11,4 @@ Particularly, the prgram parses a text file, which contains a code in a made up 
 
 **An important remark:** As written above, this project is in the making.  For now, only the first part of the whole project is complete. All of the description above relates to the current milestone.
 
-A [link](https://www.flightgear.org/download/) to the flight simulator.
+A [link](https://www.flightgear.org/download/) to the flight simulator download.
