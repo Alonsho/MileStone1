@@ -1,7 +1,7 @@
 Flight Simulator
 =======
 
-First milesone
+First milestone
 -----------
 _Contributors_: Alonsho, dorgamliel.
 
