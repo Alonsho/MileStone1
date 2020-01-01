@@ -80,7 +80,6 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
 // receives data from the simulator and assigns the values to the matching variables if needed
 void OpenServerCommand::getData(SymbolTable* symt) {
     char buffer[1024] = {0};
-    int valread = 1;
     string value;
     string dataLine;
     std::vector<std::string> values;
@@ -101,7 +100,7 @@ void OpenServerCommand::getData(SymbolTable* symt) {
             values.push_back(singleValue);
         }
         // assign each value to the matching variable
-        for (int i = 0; i < values.size(); i++) {
+        for (unsigned int i = 0; i < values.size(); i++) {
             symt->editSimArr(i, stod(values[i]));
         }
         values.clear();
@@ -124,7 +123,7 @@ string OpenServerCommand::getLastLine(char* buffer) {
     // check which is the LATEST valid line and return it
     int i = dataLines.size();
     i--;
-    for (i; i >= 0; i--) {
+    for (;i >= 0; i--) {
         if (regex_match(dataLines[i], lineSyntax)) {
             return dataLines[i];
         }
