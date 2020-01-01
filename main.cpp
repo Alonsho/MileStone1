@@ -13,11 +13,11 @@
 void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt);
 
 using namespace std;
-int main() {
+int main(int argc, char *argv[]) {
 
     map<string, Command*> commandMap = ConditionParser::initializeCommandMap();
     SymbolTable symt;
-    vector<string> commandLex = lexFile("fly.txt");
+    vector<string> commandLex = lexFile(argv[1]);
     parse(&commandLex, &commandMap, &symt);
     ConditionParser::cleanMap(commandMap);
     return 0;
