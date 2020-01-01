@@ -6,7 +6,6 @@
 #include "Lexer.h"
 #include "SymbolTable.h"
 #include "Interpreter.h"
-#include "WhileCommand.h"
 #include "ConditionParser.h"
 
 
@@ -14,7 +13,10 @@ void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable
 
 using namespace std;
 int main(int argc, char *argv[]) {
-
+    if (argv[1] == nullptr) {
+        cerr<<"No file name entered.";
+        exit(1);
+    }
     map<string, Command*> commandMap = ConditionParser::initializeCommandMap();
     SymbolTable symt;
     vector<string> commandLex = lexFile(argv[1]);
