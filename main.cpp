@@ -12,7 +12,7 @@
 void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt);
 
 using namespace std;
-int main(int argc, char *argv[]) {
+int main(int , char *argv[]) {
     if (argv[1] == nullptr) {
         cerr<<"No file name entered.";
         exit(1);
