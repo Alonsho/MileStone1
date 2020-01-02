@@ -69,6 +69,7 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
     // receive first line of data, it will not be used for any purpose
     char buffer[1024] = {0};
     read( client_socket , buffer, 1024);
+    string st = buffer;
     // once the first line arrives, continue the script and create an independent thread which
     // continuously receives data from the simulator
     thread(&OpenServerCommand::getData, this, symt).detach();
@@ -111,7 +112,7 @@ void OpenServerCommand::getData(SymbolTable* symt) {
 // gets the latest VALID line of data sent by the simulator
 string OpenServerCommand::getLastLine(char* buffer) {
     // valid syntax of a full line of data
-    regex lineSyntax("((-?)[0-9]+\\.([0-9]{6},)){35}(-?)[0-9]+\\.([0-9]){6}");
+    regex lineSyntax("((-?)[0-9]+\\.([0-9]+,)){35}(-?)[0-9]+\\.([0-9])+");
     std::vector<std::string> dataLines;
     std::string singleLine;
     std::istringstream tokenStream(buffer);
