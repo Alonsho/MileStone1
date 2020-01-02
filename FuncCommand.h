@@ -16,12 +16,14 @@ public:
     FuncCommand() {};
     int getLine(){ return lines; }
     int execute(vector<string>* param, int index, SymbolTable* symt, map<string, Command*> commandMap);
+
     //This function checks and returns propriety of function's first line (declaration).
     static bool isAFuncCommand(vector<string>* param, int index) {
         string s1 = (*param)[index+1].substr(0, (*param)[index+1].find(' ')) ;
         string s2 = (*param)[index+2];
         return s1 == "var" && s2 == "{";
     }
+
     void addParamToFunc(SymbolTable* symt, vector<string> *lexer, int index) {
         string s = (*lexer)[index].substr((*lexer)[index].find(' '));
         s.erase(0, 1);
@@ -29,6 +31,8 @@ public:
         symt->addToMap(var, s);
         variable = var;
     }
+
+    //this function returns number of lines in scope.
     int countFuncLines(vector<string> *lexer, int index){
         int tempInd = index;
         int bracketCounter = 0;
