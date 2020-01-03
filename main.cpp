@@ -9,8 +9,7 @@
 #include "ConditionParser.h"
 #include "FuncCommand.h"
 
-void createFunctionCommand(vector<string>, map<string, Command*>*, SymbolTable*,int , vector<string> );
-void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt);
+void parse(vector<string> *lexer, SymbolTable* symt);
 
 
 map<string, Command*> commandMap;
@@ -23,19 +22,19 @@ int main(int , char *argv[]) {
     commandMap = ConditionParser::initializeCommandMap();
     SymbolTable symt;
     vector<string> commandLex = lexFile(argv[1]);
-    parse(&commandLex, &commandMap, &symt);
+    parse(&commandLex, &symt);
     ConditionParser::cleanMap(commandMap);
     return 0;
 }
 
 //parsing each line of text file. MISSING - editing variables (from lex index 116).
-void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt) {
+void parse(vector<string> *lexer, SymbolTable* symt) {
     vector<string> funcVec;
     unsigned int index = 0;
     while (index < lexer->size()) {
         Command* c = NULL;
-        auto it = commandMap->find((*lexer)[index]);
-        if (it != commandMap->end()) {
+        auto it = commandMap.find((*lexer)[index]);
+        if (it != commandMap.end()) {
             c= it->second;
             index += c->execute(lexer, index+1, symt);
         } else if (FuncCommand::isAFuncCommand(lexer,index)){
@@ -44,7 +43,7 @@ void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable
             //add new function name to function names vector.
             funcVec.push_back((*lexer)[index]);
             //insert detected function into commands map.
-            commandMap->insert({(*lexer)[index].substr(0, (*lexer)[index].find('{')), func});
+            commandMap.insert({(*lexer)[index].substr(0, (*lexer)[index].find('{')), func});
             //skip function scope after declaration.
             index += func->countFuncLines(lexer, index);
         } else {
@@ -55,7 +54,7 @@ void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable
     symt->setDone();
     //remove all deleted functions fom commands map.
     while (!funcVec.empty()){
-        commandMap->erase(funcVec.back());
+        commandMap.erase(funcVec.back());
         funcVec.pop_back();
     }
 }

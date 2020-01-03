@@ -6,33 +6,38 @@
 
 
 extern map<string, Command*> commandMap;
+
+//execution of a function command; iterating over commands in scope and executing them.
 int FuncCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
     Interpreter* interp = symt->getInterpreter();
-    //Interpreting while command expression.
+    //Interpreting function command expression.
     Expression* e = interp->interpret((*param)[index]);
+    //updates function parameter.
     this->variable->setValue(e->calculate());
+    //update variable numeric value in symbol table.
     symt->editVarMap(this->variable->getName(), this->variable->getValue());
     if (lines < index) {
         index -= lines;
     }
-    int comIndex = 0;
-    comIndex = index + 2;
-    //going through scope.
-    int numOfParen = 0;
-    while ((*param)[comIndex] != "}" || numOfParen > 0) {
-        if ((*param)[comIndex] == "{") {
-            numOfParen++;
+    //pointing scope beginning.
+    index += 2;
+    int parentheses = 0;
+    //iterating scope.
+    while ((*param)[index] != "}" || parentheses > 0) {
+        if ((*param)[index] == "{") {
+            parentheses++;
         }
-        if ((*param)[comIndex] == "}") {
-            numOfParen--;
+        if ((*param)[index] == "}") {
+            parentheses--;
         }
         Command *c = NULL;
-        auto it = commandMap.find((*param)[comIndex]);
+        auto it = commandMap.find((*param)[index]);
+        //if indexed string is a command, execute it.
         if (it != commandMap.end()) {
             c = it->second;
-            comIndex += c->execute(param, comIndex + 1, symt);
+            index += c->execute(param, index + 1, symt);
         } else {
-            comIndex++;
+            index++;
         }
     }
     delete e;

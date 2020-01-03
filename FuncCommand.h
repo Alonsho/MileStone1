@@ -14,7 +14,6 @@ class FuncCommand : public ConditionParser {
     int lines;
 public:
     FuncCommand() {};
-    int getLine(){ return lines; };
     int execute(vector<string>* param, int index, SymbolTable* symt);
 
     //This function checks and returns propriety of function's first line (declaration).
@@ -24,6 +23,7 @@ public:
         return s1 == "var" && s2 == "{";
     }
 
+    //This function adds a parameter of function to function as its variable (which contains a numeric value).
     void addParamToFunc(SymbolTable* symt, vector<string> *lexer, int index) {
         string s = (*lexer)[index].substr((*lexer)[index].find(' '));
         s.erase(0, 1);
@@ -32,10 +32,11 @@ public:
         variable = var;
     }
 
-    //this function returns number of lines in scope.
+    //this function returns the number of lines in scope.
     int countFuncLines(vector<string> *lexer, int index){
         int tempInd = index;
         int bracketCounter = 0;
+        //iterates scope and checks if we have reached the relevant closing bracket.
         while ((*lexer)[tempInd] != "}" || bracketCounter != 1) {
             if ((*lexer)[tempInd] == "{") {
                 bracketCounter++;
@@ -45,6 +46,7 @@ public:
             }
             tempInd++;
         }
+        //updating scope size.
         lines = tempInd - index;
         return lines;
     }

@@ -152,16 +152,16 @@ SymbolTable::~SymbolTable(){
     }
 }
 
+//This function adds all Variables from symbol table array and map, without duplicates.
 vector<Variable*> SymbolTable::transferToVector() {
     vector<Variable*> vec;
     auto it = this->varMap.begin();
-    //iterating array.
+    //adding variables from array
     for (unsigned int i=0; i< this->simArr.size(); i++){
         vec.push_back( this->simArr[i]);
     }
-    //iterating map.
+    //adding variables from map, without duplicates (which to not appear in both array and map).
     while (it!=this->varMap.end()){
-        string s = it->second->getName();
         //check if variable (pointer by iterator) was deleted or not.
         if (!IsInArray(it->second)) {
             vec.push_back(it->second);
