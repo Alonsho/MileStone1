@@ -5,10 +5,11 @@
 #include "WhileCommand.h"
 #include "ConditionParser.h"
 
+extern map<string, Command*> commandMap;
+
 //execution of a while command; iterating over commands in scope and executing them.
 int WhileCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
     //Initializing a map of Command objects.
-    map<string, Command*> commandMap = initializeCommandMap();
     Interpreter* interp = symt->getInterpreter();
     //Interpreting while command expression.
     Expression* e = interp->interpret((*param)[index]);
@@ -16,9 +17,16 @@ int WhileCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
     //Check if condition of while command in text file is met.
     while (e->calculate() != 0) {
         //skipping index of opening bracket.
-        comIndex = index + 1;
+        comIndex = index + 2;
         //while scope.
-        while ((*param)[comIndex] != "}") {
+        int numOfParen = 0;
+        while ((*param)[comIndex] != "}" || numOfParen > 0) {
+            if ((*param)[comIndex] == "{") {
+                numOfParen++;
+            }
+            if ((*param)[comIndex] == "}") {
+                numOfParen--;
+            }
             Command* c = NULL;
             auto it = commandMap.find((*param)[comIndex]);
             if (it != commandMap.end()) {
@@ -34,14 +42,20 @@ int WhileCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
     if (comIndex == 0) {
         //index inside scope (skipping opening bracket).
         comIndex = index + 1;
-        while ((*param)[comIndex] != "}") {
+        int numOfParen = 0;
+        while ((*param)[comIndex] != "}" || numOfParen > 0) {
+            if ((*param)[comIndex] == "{") {
+                numOfParen++;
+            }
+            if ((*param)[comIndex] == "}") {
+                numOfParen--;
+            }
             comIndex++;
         }
     }
-    ConditionParser::cleanMap(commandMap);
     delete e;
     //index of closing bracket - index of while condition + 1.
-    return (comIndex-index+1);
+    return (comIndex-index+2);
 }
 
 

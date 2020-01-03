@@ -14,8 +14,8 @@ class FuncCommand : public ConditionParser {
     int lines;
 public:
     FuncCommand() {};
-    int getLine(){ return lines; }
-    int execute(vector<string>* param, int index, SymbolTable* symt, map<string, Command*> commandMap);
+    int getLine(){ return lines; };
+    int execute(vector<string>* param, int index, SymbolTable* symt);
 
     //This function checks and returns propriety of function's first line (declaration).
     static bool isAFuncCommand(vector<string>* param, int index) {

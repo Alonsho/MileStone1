@@ -12,13 +12,15 @@
 void createFunctionCommand(vector<string>, map<string, Command*>*, SymbolTable*,int , vector<string> );
 void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable* symt);
 
+
+map<string, Command*> commandMap;
 using namespace std;
 int main(int , char *argv[]) {
     if (argv[1] == nullptr) {
         cerr<<"No file name entered."<<endl;
         exit(1);
     }
-    map<string, Command*> commandMap = ConditionParser::initializeCommandMap();
+    commandMap = ConditionParser::initializeCommandMap();
     SymbolTable symt;
     vector<string> commandLex = lexFile(argv[1]);
     parse(&commandLex, &commandMap, &symt);
@@ -35,7 +37,7 @@ void parse(vector<string> *lexer, map<string, Command*>* commandMap, SymbolTable
         auto it = commandMap->find((*lexer)[index]);
         if (it != commandMap->end()) {
             c= it->second;
-            index += c->execute(lexer, index+1, symt, *commandMap);
+            index += c->execute(lexer, index+1, symt);
         } else if (FuncCommand::isAFuncCommand(lexer,index)){
             auto* func = new FuncCommand();
             func->addParamToFunc(symt, lexer, index + 1);

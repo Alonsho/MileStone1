@@ -3,9 +3,10 @@
 //
 
 #include "FuncCommand.h"
-int FuncCommand::execute(vector<string> *param, int index, SymbolTable *symt, map<string, Command*> commandMap1) {
-    map<string, Command*> commandMap = initializeCommandMap();
-    commandMap.insert(commandMap1.begin(), commandMap1.end());
+
+
+extern map<string, Command*> commandMap;
+int FuncCommand::execute(vector<string> *param, int index, SymbolTable *symt) {
     Interpreter* interp = symt->getInterpreter();
     //Interpreting while command expression.
     Expression* e = interp->interpret((*param)[index]);
@@ -15,14 +16,21 @@ int FuncCommand::execute(vector<string> *param, int index, SymbolTable *symt, ma
         index -= lines;
     }
     int comIndex = 0;
-    comIndex = index + 1;
+    comIndex = index + 2;
     //going through scope.
-    while ((*param)[comIndex] != "}") {
+    int numOfParen = 0;
+    while ((*param)[comIndex] != "}" || numOfParen > 0) {
+        if ((*param)[comIndex] == "{") {
+            numOfParen++;
+        }
+        if ((*param)[comIndex] == "}") {
+            numOfParen--;
+        }
         Command *c = NULL;
         auto it = commandMap.find((*param)[comIndex]);
         if (it != commandMap.end()) {
             c = it->second;
-            comIndex += c->execute(param, comIndex + 1, symt, commandMap);
+            comIndex += c->execute(param, comIndex + 1, symt);
         } else {
             comIndex++;
         }

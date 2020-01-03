@@ -11,6 +11,7 @@
 #include "AssignCommand.h"
 #include "WhileCommand.h"
 #include "IfCommand.h"
+#include "FuncCommand.h"
 
 
 // creates a map of commands that are to be called by their given name
@@ -32,7 +33,9 @@ map<string, Command*> ConditionParser::initializeCommandMap() {
     commandMap["while"] = wh;
     auto* _if = new IfCommand();
     commandMap["if"] = _if;
+    auto* func = new FuncCommand();
     return commandMap;
+
 }
 
 
