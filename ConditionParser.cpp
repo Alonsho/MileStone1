@@ -33,7 +33,6 @@ map<string, Command*> ConditionParser::initializeCommandMap() {
     commandMap["while"] = wh;
     auto* _if = new IfCommand();
     commandMap["if"] = _if;
-    auto* func = new FuncCommand();
     return commandMap;
 
 }
