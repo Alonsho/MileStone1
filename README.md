@@ -4,6 +4,7 @@ Flight Simulator
 First milestone
 -----------
 _Contributors_: Alonsho, dorgamliel.
+[link](https://github.com/Alonsho/MileStone1) to our GitHub repository.
 
 **Milestone description:** The main concept of this project is to send commands to a flight simulator (client to server), while receiving flight information from it, simultaneously  (also client to server, in the opposite direction).
 Particularly, the program parses a text file, which contains a code in a made up programming language (instructions were given in advance), with flight instructions, and eventually sends it to the simulator server.
