@@ -10,9 +10,10 @@
 #include <arpa/inet.h>
 #include <cstring>
 #include <thread>
+#include <unistd.h>
 #include "Interpreter.h"
 
-
+bool clientSocketRunning;
 // connects to the simulator and sends data if needed
 int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt) {
     Interpreter* interp = symt->getInterpreter();
@@ -23,6 +24,7 @@ int ConnectCommand::execute(vector<string>* param, int index, SymbolTable* symt)
         std::cerr << "Could not create a socket"<<std::endl;
         return -1;
     }
+    clientSocketRunning = true;
     string str = (*param)[index].substr(1, (*param)[index].size() - 2);
     char* ip = new char[str.size() + 1];
     strcpy(ip, (*param)[0].c_str());
@@ -71,5 +73,7 @@ void ConnectCommand::sendData(SymbolTable* symt, int client_socket) {
             delete[] toSend;
         }
     }
+    close(client_socket);
+    clientSocketRunning = false;
 }
 

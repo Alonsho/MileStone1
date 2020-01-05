@@ -11,6 +11,8 @@
 #include <regex>
 #include "OpenServerCommand.h"
 
+
+bool serverSocketRunning;
 using namespace std;
 
 OpenServerCommand::OpenServerCommand() {
@@ -63,6 +65,7 @@ int OpenServerCommand::execute(vector<string>* param, int index, SymbolTable* sy
         cout<<"connected to simulator"<<std::endl;
 
     }
+    serverSocketRunning = true;
 
     //closing the listening socket
     close(socketfd);
@@ -106,6 +109,8 @@ void OpenServerCommand::getData(SymbolTable* symt) {
         }
         values.clear();
     }
+    close(client_socket);
+    serverSocketRunning = false;
 }
 
 

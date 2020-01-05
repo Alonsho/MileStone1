@@ -10,9 +10,12 @@
 #include "FuncCommand.h"
 
 void parse(vector<string> *lexer, SymbolTable* symt);
+void closeSockets();
 
 
 map<string, Command*> commandMap;
+extern bool clientSocketRunning;
+extern bool serverSocketRunning;
 using namespace std;
 int main(int , char *argv[]) {
     if (argv[1] == nullptr) {
@@ -24,6 +27,7 @@ int main(int , char *argv[]) {
     vector<string> commandLex = lexFile(argv[1]);
     parse(&commandLex, &symt);
     ConditionParser::cleanMap(commandMap);
+    closeSockets();
     return 0;
 }
 
@@ -56,5 +60,12 @@ void parse(vector<string> *lexer, SymbolTable* symt) {
     while (!funcVec.empty()){
         commandMap.erase(funcVec.back());
         funcVec.pop_back();
+    }
+}
+
+
+void closeSockets() {
+    while (clientSocketRunning || serverSocketRunning) {
+        sleep(1);
     }
 }
